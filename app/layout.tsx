@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter, JetBrains_Mono } from 'next/font/google'
 import './globals.css'
+import ClientLayout from './ClientLayout'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -42,13 +43,13 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="tr" className="scroll-smooth">
+    <html lang="en" className="scroll-smooth">
       <body
         className={`${inter.variable} ${jetbrains.variable} bg-[#0a0a0a] text-gray-100 antialiased`}
       >
         {/* Subtle noise overlay */}
         <div className="noise-overlay" aria-hidden="true" />
-        {children}
+        <ClientLayout>{children}</ClientLayout>
       </body>
     </html>
   )

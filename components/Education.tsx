@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { GraduationCap, Award, ExternalLink, Calendar } from 'lucide-react'
+import { useTranslations } from 'next-intl'
 
 const education = [
   {
@@ -58,6 +59,8 @@ const certificates = [
 ]
 
 export default function Education() {
+  const t = useTranslations('education')
+  
   return (
     <section id="education" className="relative py-28 px-6 overflow-hidden">
       {/* bg */}
@@ -76,9 +79,9 @@ export default function Education() {
           transition={{ duration: 0.6 }}
           className="mb-16"
         >
-          <p className="section-tag mb-3">04 / Education & Certificates</p>
+          <p className="section-tag mb-3">{t('tag')}</p>
           <h2 className="text-4xl md:text-5xl font-black text-white">
-            Learning <span className="gradient-text">Path</span>
+            {t('title')} <span className="gradient-text">{t('titleHighlight')}</span>
           </h2>
           <div className="mt-4 w-16 h-0.5 bg-gradient-to-r from-[#a855f7] to-transparent" />
         </motion.div>
@@ -94,7 +97,7 @@ export default function Education() {
               className="flex items-center gap-2 mb-6"
             >
               <GraduationCap size={20} className="text-[#00f5ff]" />
-              <h3 className="font-bold text-lg text-white">Eğitim</h3>
+              <h3 className="font-bold text-lg text-white">{t('educationTitle')}</h3>
             </motion.div>
 
             <div className="space-y-5">
@@ -157,7 +160,7 @@ export default function Education() {
               className="flex items-center gap-2 mb-6"
             >
               <Award size={20} className="text-[#a855f7]" />
-              <h3 className="font-bold text-lg text-white">Sertifikalar</h3>
+              <h3 className="font-bold text-lg text-white">{t('certificatesTitle')}</h3>
             </motion.div>
 
             <div className="space-y-3">
@@ -225,7 +228,7 @@ export default function Education() {
               className="mt-5 p-4 rounded-xl border border-dashed border-white/10 text-center"
             >
               <p className="text-white/30 text-xs font-mono">
-                Continuously learning — always leveling up 🚀
+                {t('continuousLearning')}
               </p>
             </motion.div>
           </div>

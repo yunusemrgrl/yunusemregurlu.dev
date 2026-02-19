@@ -3,19 +3,22 @@
 import { useEffect, useState, useCallback } from 'react'
 import { motion, useScroll, useSpring } from 'framer-motion'
 import { Menu, X, Terminal } from 'lucide-react'
-
-const navLinks = [
-  { label: 'Hakkımda', href: '#about' },
-  { label: 'Yetenekler', href: '#skills' },
-  { label: 'Deneyim', href: '#experience' },
-  { label: 'Eğitim', href: '#education' },
-  { label: 'İletişim', href: '#contact' },
-]
+import { useTranslations } from 'next-intl'
+import LanguageSwitcher from './LanguageSwitcher'
 
 export default function Navbar() {
+  const t = useTranslations('nav')
   const [scrolled, setScrolled] = useState(false)
   const [activeSection, setActiveSection] = useState('')
   const [menuOpen, setMenuOpen] = useState(false)
+  
+  const navLinks = [
+    { label: t('about'), href: '#about' },
+    { label: t('skills'), href: '#skills' },
+    { label: t('experience'), href: '#experience' },
+    { label: t('education'), href: '#education' },
+    { label: t('contact'), href: '#contact' },
+  ]
 
   const { scrollYProgress } = useScroll()
   const scaleX = useSpring(scrollYProgress, {
@@ -118,6 +121,7 @@ export default function Navbar() {
                 )}
               </motion.button>
             ))}
+            <LanguageSwitcher />
             <motion.a
               href="mailto:yunusemregurlu@gmail.com"
               initial={{ opacity: 0, scale: 0.9 }}
@@ -127,7 +131,7 @@ export default function Navbar() {
               whileTap={{ scale: 0.95 }}
               className="ml-3 px-5 py-2 rounded-full text-sm font-semibold border border-[#00f5ff]/50 text-[#00f5ff] hover:bg-[#00f5ff]/10 hover:border-[#00f5ff] hover:shadow-[0_0_15px_rgba(0,245,255,0.3)] transition-all duration-300"
             >
-              Hire Me
+              {t('hireMe')}
             </motion.a>
           </div>
 

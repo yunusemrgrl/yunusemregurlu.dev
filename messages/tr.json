@@ -1,0 +1,80 @@
+{
+  "nav": {
+    "about": "Hakkımda",
+    "skills": "Yetenekler",
+    "experience": "Deneyim",
+    "education": "Eğitim",
+    "contact": "İletişim",
+    "hireMe": "Beni İşe Al"
+  },
+  "hero": {
+    "hello": "Merhaba Dünya",
+    "roles": {
+      "frontend": "Frontend Geliştirici",
+      "react": "React & Next.js Uzmanı",
+      "vue": "Vue & Nuxt Uzmanı",
+      "ui": "UI Mimarisi Geliştiricisi"
+    },
+    "bio": "Üretim için hazır kullanıcı arayüzleri oluşturma konusunda güçlü deneyime sahip, oldukça motive olmuş Frontend Geliştirici. Durum yönetimi, API entegrasyonu ve bileşen odaklı geliştirmede sağlam uzmanlıkla ölçeklenebilir, sürdürülebilir mimarilerde yetenekli.",
+    "viewProjects": "Projelerimi İncele",
+    "contactMe": "Bana Ulaş",
+    "scroll": "Kaydır"
+  },
+  "about": {
+    "tag": "01 / Hakkımda",
+    "title": "Kim",
+    "titleHighlight": "Benim?",
+    "bio1": "React.js / Next.js ve Vue.js / Nuxt.js gibi modern JavaScript çerçeveleri kullanarak üretim için hazır kullanıcı arayüzleri oluşturma konusunda güçlü deneyime sahip, oldukça motive ve uygulamalı bir Frontend Geliştirici.",
+    "bio2": "Durum yönetimi, API entegrasyonu (REST & GraphQL) ve bileşen odaklı UI geliştirmede sağlam deneyimle ölçeklenebilir, sürdürülebilir ve performans odaklı frontend mimarileri geliştirmede yetenekli.",
+    "bio3": "Temiz kod, performans optimizasyonu ve tasarım sistemlerini yeniden kullanılabilir frontend bileşenlerine dönüştürme konusunda tutkuluyum. Git ve modern iş akışlarını kullanan işbirlikçi geliştirme ortamlarında deneyimliyim, CI/CD süreçlerine pratik maruziyetim var.",
+    "bio4": "Güçlü analitik problem çözme becerileri, uyum yeteneği ve frontend odaklı ekiplerde öğrenme ve büyüme konusunda sürekli bir dürtü ile tanınırım.",
+    "stats": {
+      "experience": "Yıl Deneyim",
+      "companies": "Şirket",
+      "technologies": "Teknoloji"
+    },
+    "badges": {
+      "currentlyBuilding": "Şu anda Next.js & Vue ile geliştirme yapıyorum",
+      "performance": "Performans öncelikli düşünce",
+      "remote": "Uzaktan çalışmaya hazır & çok dilli ekipler",
+      "open": "Yeni fırsatlara açığım"
+    }
+  },
+  "skills": {
+    "tag": "02 / Yetenekler",
+    "title": "Teknoloji",
+    "titleHighlight": "Uzmanlığı",
+    "subtitle": "Keşfetmek için bir yeteneğin üzerine gelin — her kart arkasındaki deneyimin derinliğini ortaya çıkarır."
+  },
+  "experience": {
+    "tag": "03 / Deneyim",
+    "title": "Kariyer",
+    "titleHighlight": "Yolculuğu",
+    "subtitle": "Detayları genişletmek için herhangi bir karta tıklayın.",
+    "remote": "Uzaktan",
+    "onsite": "Yerinde"
+  },
+  "education": {
+    "tag": "04 / Eğitim ve Sertifikalar",
+    "title": "Öğrenme",
+    "titleHighlight": "Yolu",
+    "educationTitle": "Eğitim",
+    "certificatesTitle": "Sertifikalar",
+    "continuousLearning": "Sürekli öğreniyor — her zaman seviye atlıyorum 🚀"
+  },
+  "contact": {
+    "tag": "05 / İletişim",
+    "title": "Birlikte harika bir şeyler yapalım mı?",
+    "subtitle": "Yeni projelere, ilginç fikirlere ve yaratıcı işbirliklerine açığım. Bir şeyler inşa etmek için doğru zamanı beklemeyin!",
+    "email": "E-posta",
+    "phone": "Telefon",
+    "downloadCV": "CV İndir",
+    "cvFormat": "PDF formatında — güncel versiyon"
+  },
+  "footer": {
+    "madeWith": "İle yapıldı",
+    "and": "ve bolca",
+    "backToTop": "Başa dön",
+    "builtWith": "Next.js 15 · TypeScript · Tailwind CSS · Framer Motion ile oluşturuldu"
+  }
+}
