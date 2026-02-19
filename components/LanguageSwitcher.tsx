@@ -1,10 +1,11 @@
 'use client'
 
 import { useLocale } from 'next-intl'
-import { useRouter, usePathname } from 'next/navigation'
 import { motion } from 'framer-motion'
 import { Globe } from 'lucide-react'
-import { locales, type Locale } from '@/i18n/request'
+
+const locales = ['en', 'tr'] as const
+type Locale = (typeof locales)[number]
 
 const languageNames: Record<Locale, string> = {
   en: 'EN',
@@ -13,14 +14,12 @@ const languageNames: Record<Locale, string> = {
 
 export default function LanguageSwitcher() {
   const locale = useLocale() as Locale
-  const router = useRouter()
-  const pathname = usePathname()
 
   const switchLocale = (newLocale: Locale) => {
-    // Remove the current locale prefix from pathname
-    const pathnameWithoutLocale = pathname.replace(`/${locale}`, '')
-    // Navigate to the new locale
-    router.push(`/${newLocale}${pathnameWithoutLocale || ''}`)
+    // Save to localStorage
+    localStorage.setItem('locale', newLocale)
+    // Reload page to apply new locale
+    window.location.reload()
   }
 
   return (
