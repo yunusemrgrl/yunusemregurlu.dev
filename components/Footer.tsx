@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { Github, Linkedin, ExternalLink, Heart, Coffee, ArrowUp } from 'lucide-react'
+import { useTranslations } from 'next-intl'
 
 const socials = [
   {
@@ -25,6 +26,7 @@ const socials = [
 ]
 
 export default function Footer() {
+  const t = useTranslations('footer')
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' })
 
   return (
@@ -56,8 +58,8 @@ export default function Footer() {
               <span className="text-white/40 text-xs font-mono">Frontend Developer</span>
             </div>
             <p className="text-white/25 text-xs font-mono text-center md:text-left">
-              © 2025 Yunus Emre GÜRLÜ &nbsp;•&nbsp; Made with{' '}
-              <Heart size={10} className="inline text-red-400" /> and lots of{' '}
+              © 2025 Yunus Emre GÜRLÜ &nbsp;•&nbsp; {t('madeWith')}{' '}
+              <Heart size={10} className="inline text-red-400" /> {t('and')}{' '}
               <Coffee size={10} className="inline text-amber-400" />
             </p>
           </motion.div>
@@ -111,7 +113,7 @@ export default function Footer() {
             className="flex items-center gap-2 text-white/30 hover:text-[#00f5ff] text-xs font-mono transition-colors duration-300 group"
             whileHover={{ y: -2 }}
           >
-            <span>Back to top</span>
+            <span>{t('backToTop')}</span>
             <motion.span
               animate={{ y: [0, -3, 0] }}
               transition={{ repeat: Infinity, duration: 1.5, ease: 'easeInOut' }}
@@ -130,7 +132,7 @@ export default function Footer() {
           }}
         />
         <p className="mt-4 text-center text-white/15 text-[10px] font-mono">
-          Built with Next.js 15 · TypeScript · Tailwind CSS · Framer Motion
+          {t('builtWith')}
         </p>
       </div>
     </footer>

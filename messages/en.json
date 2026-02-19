@@ -1,0 +1,80 @@
+{
+  "nav": {
+    "about": "About",
+    "skills": "Skills",
+    "experience": "Experience",
+    "education": "Education",
+    "contact": "Contact",
+    "hireMe": "Hire Me"
+  },
+  "hero": {
+    "hello": "Hello World",
+    "roles": {
+      "frontend": "Frontend Developer",
+      "react": "React & Next.js Engineer",
+      "vue": "Vue & Nuxt Specialist",
+      "ui": "UI Architecture Builder"
+    },
+    "bio": "Highly motivated Frontend Developer with strong experience building production-ready user interfaces. Skilled in scalable, maintainable architectures with solid expertise in state management, API integration, and component-driven development.",
+    "viewProjects": "View My Projects",
+    "contactMe": "Contact Me",
+    "scroll": "Scroll"
+  },
+  "about": {
+    "tag": "01 / About",
+    "title": "Who",
+    "titleHighlight": "Am I?",
+    "bio1": "Highly motivated and hands-on Frontend Developer with strong experience building production-ready user interfaces using modern JavaScript frameworks such as React.js / Next.js and Vue.js / Nuxt.js.",
+    "bio2": "Skilled in developing scalable, maintainable, and performance-oriented frontend architectures, with solid experience in state management, API integration (REST & GraphQL), and component-driven UI development.",
+    "bio3": "Passionate about clean code, performance optimization, and translating design systems into reusable frontend components. Experienced in collaborative development environments using Git and modern workflows, with practical exposure to CI/CD processes.",
+    "bio4": "Known for strong analytical problem-solving skills, adaptability, and a continuous drive to learn and grow within frontend-focused teams.",
+    "stats": {
+      "experience": "Years Experience",
+      "companies": "Companies",
+      "technologies": "Technologies"
+    },
+    "badges": {
+      "currentlyBuilding": "Currently building with Next.js & Vue",
+      "performance": "Performance-first mindset",
+      "remote": "Remote-ready & multilingual teams",
+      "open": "Open to new opportunities"
+    }
+  },
+  "skills": {
+    "tag": "02 / Skills",
+    "title": "Tech",
+    "titleHighlight": "Expertise",
+    "subtitle": "Hover over a skill to explore — each card reveals the depth of experience behind it."
+  },
+  "experience": {
+    "tag": "03 / Experience",
+    "title": "Career",
+    "titleHighlight": "Journey",
+    "subtitle": "Click any card to expand the details.",
+    "remote": "Remote",
+    "onsite": "On-site"
+  },
+  "education": {
+    "tag": "04 / Education & Certificates",
+    "title": "Learning",
+    "titleHighlight": "Path",
+    "educationTitle": "Education",
+    "certificatesTitle": "Certificates",
+    "continuousLearning": "Continuously learning — always leveling up 🚀"
+  },
+  "contact": {
+    "tag": "05 / Contact",
+    "title": "Let's build something amazing together?",
+    "subtitle": "I'm open to new projects, interesting ideas, and creative collaborations. Don't wait for the perfect moment to build something great!",
+    "email": "Email",
+    "phone": "Phone",
+    "downloadCV": "Download CV",
+    "cvFormat": "PDF format — latest version"
+  },
+  "footer": {
+    "madeWith": "Made with",
+    "and": "and lots of",
+    "backToTop": "Back to top",
+    "builtWith": "Built with Next.js 15 · TypeScript · Tailwind CSS · Framer Motion"
+  }
+}

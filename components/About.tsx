@@ -2,13 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { Code2, Zap, Globe, Coffee } from 'lucide-react'
-
-const badges = [
-  { icon: <Code2 size={14} />, text: 'Currently building with Next.js & Vue' },
-  { icon: <Zap size={14} />, text: 'Performance-first mindset' },
-  { icon: <Globe size={14} />, text: 'Remote-ready & multilingual teams' },
-  { icon: <Coffee size={14} />, text: 'Open to new opportunities' },
-]
+import { useTranslations } from 'next-intl'
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -20,6 +14,15 @@ const fadeUp = {
 }
 
 export default function About() {
+  const t = useTranslations('about')
+  
+  const badges = [
+    { icon: <Code2 size={14} />, text: t('badges.currentlyBuilding') },
+    { icon: <Zap size={14} />, text: t('badges.performance') },
+    { icon: <Globe size={14} />, text: t('badges.remote') },
+    { icon: <Coffee size={14} />, text: t('badges.open') },
+  ]
+
   return (
     <section id="about" className="relative py-28 px-6 overflow-hidden">
       {/* Subtle gradient bg */}
@@ -41,9 +44,9 @@ export default function About() {
           transition={{ duration: 0.6 }}
           className="mb-16"
         >
-          <p className="section-tag mb-3">01 / About</p>
+          <p className="section-tag mb-3">{t('tag')}</p>
           <h2 className="text-4xl md:text-5xl font-black text-white">
-            Who <span className="gradient-text">Am I?</span>
+            {t('title')} <span className="gradient-text">{t('titleHighlight')}</span>
           </h2>
           <div className="mt-4 w-16 h-0.5 bg-gradient-to-r from-[#00f5ff] to-transparent" />
         </motion.div>
@@ -87,9 +90,9 @@ export default function About() {
             {/* Stats row */}
             <div className="flex gap-8 pt-4">
               {[
-                { value: '3+', label: 'Years Experience' },
-                { value: '5+', label: 'Companies' },
-                { value: '10+', label: 'Technologies' },
+                { value: '3+', label: t('stats.experience') },
+                { value: '5+', label: t('stats.companies') },
+                { value: '10+', label: t('stats.technologies') },
               ].map((stat) => (
                 <div key={stat.label} className="text-center">
                   <div className="text-2xl font-black gradient-text">{stat.value}</div>

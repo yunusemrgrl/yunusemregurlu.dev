@@ -2,8 +2,10 @@
 
 import { motion } from 'framer-motion'
 import { Mail, Phone, Download, Sparkles, ArrowRight } from 'lucide-react'
+import { useTranslations } from 'next-intl'
 
 export default function CTA() {
+  const t = useTranslations('contact')
   return (
     <section id="contact" className="relative py-32 px-6 overflow-hidden">
       {/* Animated gradient background */}
@@ -36,21 +38,16 @@ export default function CTA() {
             className="flex items-center justify-center gap-2 mb-4"
           >
             <Sparkles size={16} className="text-[#00f5ff]" />
-            <span className="section-tag">05 / Contact</span>
+            <span className="section-tag">{t('tag')}</span>
             <Sparkles size={16} className="text-[#a855f7]" />
           </motion.div>
 
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-black text-white leading-tight">
-            Let's{' '}
-            <span className="gradient-text">build</span>{' '}
-            something
-            <br />
-            <span className="gradient-text-reverse">amazing together?</span>
+            {t('title')}
           </h2>
 
           <p className="mt-6 text-white/50 text-base max-w-xl mx-auto leading-relaxed">
-            I'm open to new projects, interesting ideas, and creative collaborations.
-            Don't wait for the perfect moment to build something great!
+            {t('subtitle')}
           </p>
         </motion.div>
 
@@ -71,7 +68,7 @@ export default function CTA() {
               <Mail size={22} className="text-[#00f5ff]" />
             </div>
             <div className="flex-1 min-w-0">
-              <p className="text-white/40 text-xs font-mono mb-1">Email</p>
+              <p className="text-white/40 text-xs font-mono mb-1">{t('email')}</p>
               <p className="text-white/90 text-sm font-semibold truncate">yunusemregurlu@gmail.com</p>
             </div>
             <ArrowRight size={16} className="text-white/20 group-hover:text-[#00f5ff] group-hover:translate-x-1 transition-all duration-300 flex-shrink-0" />
@@ -92,7 +89,7 @@ export default function CTA() {
               <Phone size={22} className="text-[#a855f7]" />
             </div>
             <div className="flex-1 min-w-0">
-              <p className="text-white/40 text-xs font-mono mb-1">Phone</p>
+              <p className="text-white/40 text-xs font-mono mb-1">{t('phone')}</p>
               <p className="text-white/90 text-sm font-semibold">+90 539 462 74 46</p>
             </div>
             <ArrowRight size={16} className="text-white/20 group-hover:text-[#a855f7] group-hover:translate-x-1 transition-all duration-300 flex-shrink-0" />
@@ -127,11 +124,11 @@ export default function CTA() {
               }}
             />
             <Download size={20} className="text-[#0a0a0a]" />
-            <span className="text-[#0a0a0a]">Download CV</span>
+            <span className="text-[#0a0a0a]">{t('downloadCV')}</span>
           </motion.a>
 
           <p className="mt-4 text-white/25 text-xs font-mono">
-            PDF format — latest version
+            {t('cvFormat')}
           </p>
         </motion.div>
 

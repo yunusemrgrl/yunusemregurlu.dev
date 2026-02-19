@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ArrowDown, Github, Linkedin, FileText, ExternalLink } from 'lucide-react'
+import { useTranslations } from 'next-intl'
 
 /* ── Matrix Rain Canvas ─────────────────────────────── */
 function MatrixRain() {
@@ -141,11 +142,13 @@ function SocialLink({ href, icon, label, color }: SocialLinkProps) {
 
 /* ── Hero ───────────────────────────────────────────── */
 export default function Hero() {
+  const t = useTranslations('hero')
+  
   const roles = [
-    'Frontend Developer',
-    'React & Next.js Engineer',
-    'Vue & Nuxt Specialist',
-    'UI Architecture Builder',
+    t('roles.frontend'),
+    t('roles.react'),
+    t('roles.vue'),
+    t('roles.ui'),
   ]
   const typedRole = useTyping(roles, 75, 2200)
 
@@ -187,7 +190,7 @@ export default function Hero() {
         >
           <span className="h-px w-12 bg-gradient-to-r from-transparent to-[#00f5ff]" />
           <span className="font-mono text-xs tracking-[0.3em] text-[#00f5ff] uppercase">
-            &lt; Hello World /&gt;
+            &lt; {t('hello')} /&gt;
           </span>
           <span className="h-px w-12 bg-gradient-to-l from-transparent to-[#00f5ff]" />
         </motion.div>
@@ -244,9 +247,7 @@ export default function Hero() {
           transition={{ delay: 0.8 }}
           className="max-w-2xl mx-auto text-sm sm:text-base text-white/50 leading-relaxed mb-10"
         >
-          Highly motivated Frontend Developer with strong experience building production-ready
-          user interfaces. Skilled in scalable, maintainable architectures with solid expertise
-          in state management, API integration, and component-driven development.
+          {t('bio')}
         </motion.p>
 
         {/* CTA Buttons */}
@@ -262,7 +263,7 @@ export default function Hero() {
             whileHover={{ scale: 1.05, boxShadow: '0 0 30px rgba(0,245,255,0.5)' }}
             whileTap={{ scale: 0.97 }}
           >
-            View My Projects
+            {t('viewProjects')}
           </motion.button>
           <motion.button
             onClick={scrollToContact}
@@ -270,7 +271,7 @@ export default function Hero() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.97 }}
           >
-            Contact Me
+            {t('contactMe')}
           </motion.button>
         </motion.div>
       </div>
@@ -312,7 +313,7 @@ export default function Hero() {
         onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
       >
         <span className="font-mono text-[10px] tracking-[0.3em] text-white/30 uppercase">
-          Scroll
+          {t('scroll')}
         </span>
         <motion.div
           animate={{ y: [0, 8, 0] }}

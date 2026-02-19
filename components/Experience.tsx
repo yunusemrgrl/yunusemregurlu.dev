@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { MapPin, Calendar, ChevronDown, ExternalLink } from 'lucide-react'
+import { useTranslations } from 'next-intl'
 
 interface Experience {
   company: string
@@ -238,6 +239,8 @@ function ExperienceCard({ exp, index }: { exp: Experience; index: number }) {
 }
 
 export default function Experience() {
+  const t = useTranslations('experience')
+  
   return (
     <section id="experience" className="relative py-28 px-6 overflow-hidden">
       {/* bg gradient */}
@@ -258,12 +261,12 @@ export default function Experience() {
           transition={{ duration: 0.6 }}
           className="mb-16"
         >
-          <p className="section-tag mb-3">03 / Experience</p>
+          <p className="section-tag mb-3">{t('tag')}</p>
           <h2 className="text-4xl md:text-5xl font-black text-white">
-            Career <span className="gradient-text">Journey</span>
+            {t('title')} <span className="gradient-text">{t('titleHighlight')}</span>
           </h2>
           <p className="mt-4 text-white/40 text-sm">
-            Click any card to expand the details.
+            {t('subtitle')}
           </p>
           <div className="mt-4 w-16 h-0.5 bg-gradient-to-r from-[#00f5ff] to-transparent" />
         </motion.div>

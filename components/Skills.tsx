@@ -2,6 +2,7 @@
 
 import { useRef, useState, MouseEvent } from 'react'
 import { motion } from 'framer-motion'
+import { useTranslations } from 'next-intl'
 
 interface Skill {
   name: string
@@ -129,6 +130,8 @@ function SkillCard({ skill, index }: { skill: Skill; index: number }) {
 }
 
 export default function Skills() {
+  const t = useTranslations('skills')
+  
   return (
     <section id="skills" className="relative py-28 px-6 overflow-hidden">
       {/* bg radial */}
@@ -150,12 +153,12 @@ export default function Skills() {
           transition={{ duration: 0.6 }}
           className="mb-16 text-center md:text-left"
         >
-          <p className="section-tag mb-3">02 / Skills</p>
+          <p className="section-tag mb-3">{t('tag')}</p>
           <h2 className="text-4xl md:text-5xl font-black text-white">
-            Tech <span className="gradient-text">Expertise</span>
+            {t('title')} <span className="gradient-text">{t('titleHighlight')}</span>
           </h2>
           <p className="mt-4 text-white/40 text-sm max-w-xl mx-auto md:mx-0">
-            Hover over a skill to explore — each card reveals the depth of experience behind it.
+            {t('subtitle')}
           </p>
           <div className="mt-4 w-16 h-0.5 bg-gradient-to-r from-[#a855f7] to-transparent mx-auto md:mx-0" />
         </motion.div>
