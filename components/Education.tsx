@@ -94,7 +94,7 @@ export default function Education() {
               className="flex items-center gap-2 mb-6"
             >
               <GraduationCap size={20} className="text-[#00f5ff]" />
-              <h3 className="font-bold text-lg text-white">Eğitim</h3>
+              <h3 className="font-bold text-lg text-white">Education</h3>
             </motion.div>
 
             <div className="space-y-5">
@@ -157,7 +157,7 @@ export default function Education() {
               className="flex items-center gap-2 mb-6"
             >
               <Award size={20} className="text-[#a855f7]" />
-              <h3 className="font-bold text-lg text-white">Sertifikalar</h3>
+              <h3 className="font-bold text-lg text-white">Certificates</h3>
             </motion.div>
 
             <div className="space-y-3">

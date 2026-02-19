@@ -5,11 +5,11 @@ import { motion, useScroll, useSpring } from 'framer-motion'
 import { Menu, X, Terminal } from 'lucide-react'
 
 const navLinks = [
-  { label: 'Hakkımda', href: '#about' },
-  { label: 'Yetenekler', href: '#skills' },
-  { label: 'Deneyim', href: '#experience' },
-  { label: 'Eğitim', href: '#education' },
-  { label: 'İletişim', href: '#contact' },
+  { label: 'About', href: '#about' },
+  { label: 'Skills', href: '#skills' },
+  { label: 'Experience', href: '#experience' },
+  { label: 'Education', href: '#education' },
+  { label: 'Contact', href: '#contact' },
 ]
 
 export default function Navbar() {

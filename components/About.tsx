@@ -43,7 +43,7 @@ export default function About() {
         >
           <p className="section-tag mb-3">01 / About</p>
           <h2 className="text-4xl md:text-5xl font-black text-white">
-            Kim <span className="gradient-text">Benim?</span>
+            Who <span className="gradient-text">Am I?</span>
           </h2>
           <div className="mt-4 w-16 h-0.5 bg-gradient-to-r from-[#00f5ff] to-transparent" />
         </motion.div>
@@ -87,9 +87,9 @@ export default function About() {
             {/* Stats row */}
             <div className="flex gap-8 pt-4">
               {[
-                { value: '3+', label: 'Yıl Deneyim' },
-                { value: '5+', label: 'Şirket' },
-                { value: '10+', label: 'Teknoloji' },
+                { value: '3+', label: 'Years Experience' },
+                { value: '5+', label: 'Companies' },
+                { value: '10+', label: 'Technologies' },
               ].map((stat) => (
                 <div key={stat.label} className="text-center">
                   <div className="text-2xl font-black gradient-text">{stat.value}</div>

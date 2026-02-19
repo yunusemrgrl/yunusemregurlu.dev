@@ -262,7 +262,7 @@ export default function Hero() {
             whileHover={{ scale: 1.05, boxShadow: '0 0 30px rgba(0,245,255,0.5)' }}
             whileTap={{ scale: 0.97 }}
           >
-            Projelerimi İncele
+            View My Projects
           </motion.button>
           <motion.button
             onClick={scrollToContact}
@@ -270,7 +270,7 @@ export default function Hero() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.97 }}
           >
-            Bana Ulaş
+            Contact Me
           </motion.button>
         </motion.div>
       </div>

@@ -41,16 +41,16 @@ export default function CTA() {
           </motion.div>
 
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-black text-white leading-tight">
-            Birlikte{' '}
-            <span className="gradient-text">harika</span>{' '}
-            bir şeyler
+            Let's{' '}
+            <span className="gradient-text">build</span>{' '}
+            something
             <br />
-            <span className="gradient-text-reverse">yapalım mı?</span>
+            <span className="gradient-text-reverse">amazing together?</span>
           </h2>
 
           <p className="mt-6 text-white/50 text-base max-w-xl mx-auto leading-relaxed">
-            Yeni projelere, ilginç fikirlere ve yaratıcı işbirliklerine açığım.
-            Bir şeyler inşa etmek için doğru zamanı beklemeyin!
+            I'm open to new projects, interesting ideas, and creative collaborations.
+            Don't wait for the perfect moment to build something great!
           </p>
         </motion.div>
 
@@ -131,7 +131,7 @@ export default function CTA() {
           </motion.a>
 
           <p className="mt-4 text-white/25 text-xs font-mono">
-            PDF formatında — güncel versiyon
+            PDF format — latest version
           </p>
         </motion.div>
 
