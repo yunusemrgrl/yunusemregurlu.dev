@@ -7,7 +7,7 @@ import { useTranslations } from 'next-intl'
 const socials = [
   {
     label: 'LinkedIn',
-    href: 'https://linkedin.com/in/yunusemregurlu',
+    href: 'https://www.linkedin.com/in/yunusemregurlu',
     icon: <Linkedin size={16} />,
     color: '#00f5ff',
   },
