@@ -69,6 +69,8 @@
     "email": "Email",
     "phone": "Phone",
     "downloadCV": "Download CV",
+    "downloadFrontend": "Frontend CV",
+    "downloadFullstack": "Full Stack CV",
     "cvFormat": "PDF format — latest version"
   },
   "footer": {

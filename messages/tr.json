@@ -69,6 +69,8 @@
     "email": "E-posta",
     "phone": "Telefon",
     "downloadCV": "CV İndir",
+    "downloadFrontend": "Frontend CV",
+    "downloadFullstack": "Full Stack CV",
     "cvFormat": "PDF formatında — güncel versiyon"
   },
   "footer": {

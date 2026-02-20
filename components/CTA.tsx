@@ -96,7 +96,7 @@ export default function CTA() {
           </motion.a>
         </div>
 
-        {/* Download CV button */}
+        {/* Download CV buttons */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -104,28 +104,52 @@ export default function CTA() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-center"
         >
-          <motion.a
-            href="/YunusEmreGurlu_CV.pdf"
-            download
-            className="inline-flex items-center gap-3 px-10 py-4 rounded-full font-bold text-base tracking-wide relative overflow-hidden group"
-            style={{ background: 'linear-gradient(135deg, #00f5ff, #a855f7)' }}
-            whileHover={{
-              scale: 1.05,
-              boxShadow: '0 0 40px rgba(0,245,255,0.5), 0 0 80px rgba(168,85,247,0.3)',
-            }}
-            whileTap={{ scale: 0.97 }}
-          >
-            {/* Shimmer */}
-            <span
-              className="absolute inset-0 opacity-0 group-hover:opacity-30 transition-opacity duration-500"
-              style={{
-                background: 'linear-gradient(90deg, transparent, rgba(255,255,255,0.5), transparent)',
-                transform: 'skewX(-20deg)',
+          <p className="mb-5 text-white/40 text-xs font-mono uppercase tracking-widest">{t('downloadCV')}</p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <motion.a
+              href="/Yunus_Emre_Gurlu_Frontend_Developer.pdf"
+              download
+              className="inline-flex items-center gap-3 px-8 py-4 rounded-full font-bold text-base tracking-wide relative overflow-hidden group"
+              style={{ background: 'linear-gradient(135deg, #00f5ff, #0ea5e9)' }}
+              whileHover={{
+                scale: 1.05,
+                boxShadow: '0 0 40px rgba(0,245,255,0.5)',
               }}
-            />
-            <Download size={20} className="text-[#0a0a0a]" />
-            <span className="text-[#0a0a0a]">{t('downloadCV')}</span>
-          </motion.a>
+              whileTap={{ scale: 0.97 }}
+            >
+              <span
+                className="absolute inset-0 opacity-0 group-hover:opacity-30 transition-opacity duration-500"
+                style={{
+                  background: 'linear-gradient(90deg, transparent, rgba(255,255,255,0.5), transparent)',
+                  transform: 'skewX(-20deg)',
+                }}
+              />
+              <Download size={18} className="text-[#0a0a0a]" />
+              <span className="text-[#0a0a0a]">{t('downloadFrontend')}</span>
+            </motion.a>
+
+            <motion.a
+              href="/YunusEmreGurlu_FullStack_Developer_CV.pdf"
+              download
+              className="inline-flex items-center gap-3 px-8 py-4 rounded-full font-bold text-base tracking-wide relative overflow-hidden group"
+              style={{ background: 'linear-gradient(135deg, #a855f7, #ec4899)' }}
+              whileHover={{
+                scale: 1.05,
+                boxShadow: '0 0 40px rgba(168,85,247,0.5)',
+              }}
+              whileTap={{ scale: 0.97 }}
+            >
+              <span
+                className="absolute inset-0 opacity-0 group-hover:opacity-30 transition-opacity duration-500"
+                style={{
+                  background: 'linear-gradient(90deg, transparent, rgba(255,255,255,0.5), transparent)',
+                  transform: 'skewX(-20deg)',
+                }}
+              />
+              <Download size={18} className="text-[#0a0a0a]" />
+              <span className="text-[#0a0a0a]">{t('downloadFullstack')}</span>
+            </motion.a>
+          </div>
 
           <p className="mt-4 text-white/25 text-xs font-mono">
             {t('cvFormat')}
