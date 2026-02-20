@@ -284,7 +284,7 @@ export default function Hero() {
         className="fixed right-6 bottom-12 z-20 flex flex-col gap-3"
       >
         <SocialLink
-          href="https://linkedin.com/in/yunusemregurlu"
+          href="https://www.linkedin.com/in/yunusemregurlu"
           icon={<Linkedin size={18} />}
           label="LinkedIn"
           color="#00f5ff"
