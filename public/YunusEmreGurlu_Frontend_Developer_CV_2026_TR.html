@@ -1,0 +1,717 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yunus Emre GÜRLÜ — Frontend Developer CV</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap');
+
+    :root {
+      --accent: #D4421A;
+      --accent-soft: #FFF1ED;
+      --text: #1A1A1A;
+      --muted: #5A5A5A;
+      --border: #E5E3DE;
+      --bg: #FAFAF8;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      font-size: 16px;
+    }
+
+    body {
+      background: var(--bg);
+      font-family: 'Nunito', system-ui, sans-serif;
+      font-weight: 400;
+      color: var(--text);
+      line-height: 1.58;
+    }
+
+    /* ── Page containers ── */
+    .cv-page {
+      max-width: 820px;
+      margin: 0 auto;
+      background: #fff;
+    }
+
+    .page-1 {
+      padding: 2.8rem 3.5rem 2rem 3.5rem;
+    }
+
+    .page-2 {
+      padding: 2.8rem 3.5rem 2.8rem 3.5rem;
+    }
+
+    /* ── Header ── */
+    .header {
+      margin-bottom: 1.4rem;
+    }
+
+    h1 {
+      font-family: 'Nunito', system-ui, sans-serif;
+      font-size: 2.3rem;
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      color: var(--text);
+      line-height: 1.1;
+      margin-bottom: 0.25rem;
+    }
+
+    .subtitle {
+      font-size: 0.92rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.6rem;
+    }
+
+    .contact {
+      font-size: 0.8rem;
+      color: var(--muted);
+      line-height: 2;
+    }
+
+    .contact a {
+      color: var(--muted);
+      text-decoration: none;
+      border-bottom: 1px solid #cfcac0;
+      font-weight: 500;
+    }
+
+    .contact a::after,
+    .cert-link::after {
+      content: "↗";
+      display: inline-block;
+      margin-left: 0.22rem;
+      font-size: 0.78em;
+      line-height: 1;
+      vertical-align: text-top;
+      opacity: 0.82;
+    }
+
+    .sep {
+      margin: 0 0.4rem;
+      color: var(--border);
+    }
+
+    /* ── Section headings ── */
+    h2 {
+      font-family: 'Nunito', system-ui, sans-serif;
+      font-size: 0.63rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-top: 1.6rem;
+      margin-bottom: 0.75rem;
+      padding-bottom: 0.35rem;
+      border-bottom: 1.5px solid var(--accent);
+    }
+
+    /* ── Summary ── */
+    .summary {
+      padding-top: 0.28rem;
+    }
+
+    .summary p {
+      font-size: 0.87rem;
+      line-height: 1.82;
+      margin: 0.42rem 0 0.34rem 0;
+    }
+
+    /* ── Skills Table ── */
+    .skills-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.8rem;
+    }
+
+    .skills-table tr {
+      border-bottom: 1px solid var(--border);
+    }
+
+    .skills-table tr:last-child {
+      border-bottom: none;
+    }
+
+    .skills-table td {
+      padding: 0.45rem 0.5rem;
+      vertical-align: top;
+      line-height: 1.5;
+    }
+
+    .skills-table td:first-child {
+      white-space: nowrap;
+      font-weight: 600;
+      font-size: 0.66rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--muted);
+      width: 148px;
+      padding-right: 1rem;
+    }
+
+    /* ── Work Experience ── */
+    .job {
+      margin-bottom: 1.1rem;
+    }
+
+    .page-1 > h2 + .job,
+    .page-2 > h2 + .job {
+      margin-top: 0.45rem;
+    }
+
+    .job-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 0.15rem;
+    }
+
+    .job-title {
+      font-size: 0.93rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .job-title em {
+      font-style: normal;
+      font-weight: 300;
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+
+    .job-date {
+      font-size: 0.75rem;
+      color: var(--muted);
+      font-style: italic;
+      white-space: nowrap;
+      margin-left: 1rem;
+    }
+
+    .job ul {
+      list-style: none;
+      margin-top: 0.4rem;
+    }
+
+    .job ul li {
+      position: relative;
+      padding-left: 1rem;
+      font-size: 0.83rem;
+      color: var(--text);
+      margin-bottom: 0.3rem;
+      line-height: 1.62;
+    }
+
+    .job ul li::before {
+      content: '-';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+    }
+
+    .job-divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 1rem 0;
+    }
+
+    .page-1 > h2,
+    .page-2 > h2 {
+      margin-bottom: 0.95rem;
+    }
+
+    strong {
+      font-weight: 700;
+      color: #111;
+    }
+
+    /* ── Education ── */
+    .edu-item {
+      margin-bottom: 0.7rem;
+    }
+
+    .edu-degree {
+      font-size: 0.88rem;
+      font-weight: 600;
+    }
+
+    .edu-school {
+      font-size: 0.81rem;
+      color: var(--muted);
+      margin-top: 0.1rem;
+    }
+
+    /* ── Certificates ── */
+    .cert-list {
+      list-style: none;
+    }
+
+    .cert-list li {
+      position: relative;
+      padding-left: 1rem;
+      font-size: 0.82rem;
+      color: var(--text);
+      margin-bottom: 0.4rem;
+      line-height: 1.56;
+    }
+
+    .cert-list li::before {
+      content: '-';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-size: 0.63rem;
+      top: 0.22rem;
+    }
+
+    .cert-link {
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid #f0b8a8;
+      font-size: 0.72rem;
+      margin-left: 0.4rem;
+      font-weight: 600;
+    }
+
+    /* ── Print ── */
+    @media print {
+      html {
+        font-size: 12px;
+      }
+
+      body {
+        background: white;
+        font-weight: 400;
+        color: #111;
+        line-height: 1.44;
+      }
+
+      .subtitle {
+        font-size: 0.9rem;
+        letter-spacing: 0.02em;
+      }
+
+      .cv-page {
+        max-width: 100%;
+      }
+
+      h1 {
+        font-size: 2.08rem;
+        margin-bottom: 0.18rem;
+      }
+
+      h2 {
+        font-size: 0.66rem;
+        margin-top: 1.1rem;
+        margin-bottom: 0.5rem;
+        padding-bottom: 0.22rem;
+      }
+
+      .header {
+        margin-bottom: 0.9rem;
+      }
+
+      .contact {
+        line-height: 1.55;
+      }
+
+      .summary p,
+      .job ul li,
+      .cert-list li,
+      .edu-school,
+      .skills-table {
+        line-height: 1.38;
+      }
+
+      .summary {
+        padding-top: 0.16rem;
+      }
+
+      .summary p {
+        line-height: 1.5;
+        margin: 0.18rem 0 0.22rem 0;
+      }
+
+      .skills-table {
+        font-size: 0.77rem;
+      }
+
+      .skills-table td {
+        padding: 0.26rem 0.36rem;
+      }
+
+      .job {
+        margin-bottom: 0.72rem;
+      }
+
+      .page-1 > h2 + .job,
+      .page-2 > h2 + .job {
+        margin-top: 0.28rem;
+      }
+
+      .job-header {
+        margin-bottom: 0.08rem;
+      }
+
+      .job-title {
+        font-size: 0.9rem;
+      }
+
+      .job-date {
+        font-size: 0.72rem;
+      }
+
+      .job ul {
+        margin-top: 0.28rem;
+      }
+
+      .job ul li,
+      .cert-list li,
+      .edu-item {
+        margin-bottom: 0.18rem;
+      }
+
+      .job ul li {
+        padding-left: 0.86rem;
+      }
+
+      .job-divider {
+        margin: 0.55rem 0;
+      }
+
+      .page-1 > h2,
+      .page-2 > h2 {
+        margin-bottom: 0.62rem;
+      }
+
+      .cert-list li {
+        font-size: 0.77rem;
+      }
+
+      .cert-link {
+        font-size: 0.68rem;
+      }
+
+      .page-1 {
+        padding: 0.88cm 1.1cm 0.5cm 1.1cm;
+        page-break-after: always;
+        break-after: page;
+      }
+
+      .page-2 {
+        padding: 0.84cm 1.1cm 0.62cm 1.1cm;
+      }
+
+      a {
+        color: var(--muted) !important;
+        border-bottom: 1px solid #d5d0c7 !important;
+      }
+
+      .cert-link {
+        color: var(--accent) !important;
+      }
+    }
+
+    /* Screen: visual page break indicator */
+    @media screen {
+      .page-1 {
+        border-bottom: 2px dashed #ddd;
+        margin-bottom: 1.5rem;
+      }
+    }
+
+    @page {
+      size: A4;
+      margin: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="cv-page">
+
+    <!-- ══════════════ PAGE 1 ══════════════ -->
+    <div class="page-1">
+
+      <div class="header">
+        <h1>Yunus Emre GÜRLÜ</h1>
+        <p class="subtitle">Frontend Developer</p>
+        <p class="contact">
+          <a href="mailto:yunusemregurlu@gmail.com">yunusemregurlu@gmail.com</a>
+          <span class="sep">|</span>
+          Sakarya, TR
+          <span class="sep">|</span>
+          +90 539 462 74 46
+          <br>
+          <a href="https://linkedin.com/in/yunusemregurlu">LinkedIn</a>
+          <span class="sep">|</span>
+          <a href="https://github.com/yunusemrgrl">GitHub</a>
+          <span class="sep">|</span>
+          <a href="https://yunusemregurlu.dev">yunusemregurlu.dev</a>
+          <span class="sep">|</span>
+          <a href="https://medium.com/@yunusemregurlu">Medium</a>
+        </p>
+      </div>
+
+      <h2>Özet</h2>
+      <div class="summary">
+        <p>E-ticaret, CMS dashboard ve SaaS ürünlerinde <strong>4+ yıl</strong> production deneyimine sahip bir Frontend Developer olarak çalışıyorum. <strong>Vue.js (2/3)</strong>, <strong>React</strong> ve <strong>Next.js (SSR)</strong> ile <strong>scalable</strong> ve <strong>modular</strong> frontend sistemleri geliştiriyorum. Component lifecycle management, performance optimization, state management (<strong>Vuex</strong>, <strong>Redux Toolkit</strong>), <strong>GraphQL (Apollo Client)</strong> / <strong>REST API</strong> entegrasyonları ve <strong>TypeScript</strong> ile geliştirme konularında güçlü bir uygulama pratiğine sahibim. <strong>ESLint</strong>/<strong>Prettier</strong> ile sürdürülebilir kod standartlarını koruyorum, <strong>Jest unit testing</strong> ile değişikliklerin güvenli ve öngörülebilir biçimde ilerlemesini destekliyorum. <strong>Docker</strong>, Git workflow ve <strong>CI/CD</strong> süreçlerini etkin şekilde kullanıyorum; PR merge, code review ve ekip içi geliştirme disiplinine uyumlu bir çalışma yaklaşımı benimsiyorum.
+        </p>
+      </div>
+
+      <h2>Teknik Yetkinlikler</h2>
+      <table class="skills-table">
+        <tr>
+          <td>Frontend Stack</td>
+          <td>Vue.js (2/3), React.js, JavaScript (ES6+)</td>
+        </tr>
+        <tr>
+          <td>SSR & Frameworks</td>
+          <td>Next.js, Nuxt.js</td>
+        </tr>
+        <tr>
+          <td>Routing</td>
+          <td>Vue Router, React Router</td>
+        </tr>
+        <tr>
+          <td>State &amp; Data</td>
+          <td>Vuex, Redux (Redux Toolkit), Pinia, Zustand, TanStack Query, Context API, Component Lifecycle Management
+          </td>
+        </tr>
+        <tr>
+          <td>Data Layer</td>
+          <td>GraphQL (Apollo Client), RESTful APIs, Axios, Firebase</td>
+        </tr>
+        <tr>
+          <td>Monorepo Management</td>
+          <td>Git Submodules</td>
+        </tr>
+        <tr>
+          <td>Build & Bundling</td>
+          <td>Webpack, Vite</td>
+        </tr>
+        <tr>
+          <td>Task Automation</td>
+          <td>Gulp</td>
+        </tr>
+        <tr>
+          <td>Styling</td>
+          <td>SCSS / SASS, Material-UI, Ant Design, shadcn/ui, Tailwind CSS, Bootstrap, BEM, Atomic Design</td>
+        </tr>
+        <tr>
+          <td>UI Component Development</td>
+          <td>Storybook, Storyblok CMS</td>
+        </tr>
+        <tr>
+          <td>Backend &amp; Runtime</td>
+          <td>PHP, Laravel, Node.js (basic), OOP, MVC, Event-Driven Architecture, Microservices</td>
+        </tr>
+        <tr>
+          <td>Real-time Communication</td>
+          <td>GraphQL Pub/Sub, Socket.io, SSE (Server-Sent Events), Firebase</td>
+        </tr>
+        <tr>
+          <td>Code Quality</td>
+          <td>ESLint, Prettier</td>
+        </tr>
+        <tr>
+          <td>Type Safety</td>
+          <td>TypeScript</td>
+        </tr>
+        <tr>
+          <td>Testing &amp; Quality</td>
+          <td>Jest (Unit Testing)</td>
+        </tr>
+        <tr>
+          <td>Containerization</td>
+          <td>Docker (basic)</td>
+        </tr>
+        <tr>
+          <td>CI/CD</td>
+          <td>GitHub Workflows, Jenkins (familiar)</td>
+        </tr>
+        <tr>
+          <td>Tooling</td>
+          <td>Jira, Agile/Scrum, Swagger, Cursor, Claude Code, Codex</td>
+        </tr>
+        <tr>
+          <td>Diller</td>
+          <td>Türkçe (Ana Dil), İngilizce (Teknik - Profesyonel Çalışma Yetkinliği)</td>
+        </tr>
+      </table>
+
+      <h2>Deneyim</h2>
+
+      <div class="job">
+        <div class="job-header">
+          <span class="job-title">Frontend Developer — Machinarium <em>(Remote, AT)</em></span>
+          <span class="job-date">Eyl 2025 – Kas 2025</span>
+        </div>
+        <ul>
+          <li><strong>Next.js App Router</strong> kullanarak birden fazla e-commerce müşterisi (Gencallar, Nadir Gold, A101) için admin panel özellikleri ve reusable UI componentler geliştirdim; farklı ürünlerde tutarlı bir tasarım dili korunmasına katkı sağladım.
+          </li>
+          <li>Mevcut <strong>Context API</strong> global state yapısı ve <strong>Axios</strong> service layer üzerinde çalışarak maintainability ve API integration tutarlılığını iyileştirdim.</li>
+          <li>Paylaşılan frontend codebase içinde ekip standartlarına uygun olarak <strong>ESLint</strong> ve <strong>Prettier</strong> kullandım; takım içi <strong>Cursor Rules</strong> yapısının geliştirilmesine katkı sundum ve <strong>code review</strong> süreçlerine aktif olarak katıldım.</li>
+        </ul>
+      </div>
+      <hr class="job-divider">
+
+      <div class="job">
+        <div class="job-header">
+          <span class="job-title">Full Stack Developer (Frontend Odaklı) — Energetisch.fit <em>(Remote, AT)</em></span>
+          <span class="job-date">Eki 2024 – Tem 2025</span>
+        </div>
+        <ul>
+          <li>Yüksek kullanımlı bir Laravel + Livewire terapi rezervasyon platformunda cart, PDF generation, email workflow ve progress calculation akışlarındaki UI/data integrity sorunlarını gidererek kritik frontend akışlarını stabilize ettim; daha güçlü validation ve exception handling ile release güvenilirliğini artırdım.</li>
+          <li>Sık full-page re-render üreten legacy ve hardcoded bir Laravel frontend yapısını; component-scoped state, partial update ve debounce kontrolleri kullanan reusable <strong>Livewire/Blade</strong> componentlere refactor ederek hem maintainability hem de interaction performance tarafını iyileştirdim.</li>
+        </ul>
+      </div>
+      <hr class="job-divider">
+
+      <div class="job">
+        <div class="job-header">
+          <span class="job-title">Full Stack Developer (Frontend Odaklı) &amp; Startup Girişim — Payzec <em>(Remote,
+              TR)</em></span>
+          <span class="job-date">Ağu 2023 – Tem 2025</span>
+        </div>
+        <ul>
+          <li>Birden fazla backend servisini scalable bir <strong>Vue.js (v3)</strong> tabanlı frontend katmanıyla hizalayan <strong>modular monorepo architecture</strong> (Git submodules) yapısının tasarlanması ve sürdürülmesinde aktif rol aldım.</li>
+
+          <li><strong>Vue.js (Composition API) + Vue Router</strong> kullanarak scalable bir <strong>one-click checkout</strong> akışının geliştirilmesini yönettim; route-based navigation, reusable composable yapıları ve async 3DS payment handling kurguladım.</li>
+
+          <li>Clear separation of concerns ilkesine sahip reusable ve composable bir UI yapısı kurarak sürdürülebilir shared component patternlerini destekledim.</li>
+
+          <li>Cart, order ve payment lifecycle akışlarında <strong>Pinia</strong> ile karmaşık application state yönettim; checkout süreçlerinde öngörülebilir async davranış sağladım.</li>
+
+          <li>Reusable bir <strong>Axios-based useApi composable</strong> üzerinden API communication yapısını standardize ettim; centralized auth, CSRF handling, interceptor ve unified error management süreçlerini uyguladım.</li>
+
+          <li>Frontend logic ile backend eventlerini loosely coupled tutarken real-time UI güncellemelerini destekleyen reactive cart synchronization patternleri geliştirdim.</li>
+        </ul>
+      </div>
+
+    </div><!-- /page-1 -->
+
+    <!-- ══════════════ PAGE 2 ══════════════ -->
+    <div class="page-2">
+
+      <h2>Deneyim <em
+          style="font-family:'Nunito';font-size:0.7rem;font-weight:300;letter-spacing:0;text-transform:none;color:var(--muted);border:none;">(devam)</em>
+      </h2>
+
+      <div class="job">
+        <div class="job-header">
+          <span class="job-title">Frontend Developer — Alışgidiş <em>(Istanbul, TR)</em></span>
+          <span class="job-date">Mart 2024 – Tem 2024</span>
+        </div>
+        <ul>
+          <li>Farklı disiplinlerden ekiplerle birlikte <strong>Next.js (App Router, SSR)</strong> kullanarak modular bir e-commerce frontend geliştirilmesine katkı sundum; scalable product discovery, cart, checkout ve order lifecycle akışlarında çalıştım.</li>
+
+          <li>Senior mühendislerle yakın çalışarak <strong>Server Components</strong>, yapılandırılmış caching ve revalidation stratejileri ile seçici code splitting üzerinden performance optimization uyguladım; client-side JavaScript yükünü azalttım.</li>
+
+          <li><strong>Zustand</strong> ve <strong>TanStack Query / SWR</strong> kullanılarak scalable bir state management mimarisinin oluşturulmasına katkı sağladım; öngörülebilir async akışlar ve <strong>optimistic UI</strong> davranışını destekledim.
+          </li>
+
+          <li>Tutarlılık ve long-term maintainability sağlamak için <strong>Atomic Design</strong> prensiplerini izleyen reusable bir component sisteminin geliştirilmesi ve sürdürülmesine katıldım.</li>
+
+          <li>Backend ekipleriyle API contract uyumu üzerinde çalıştım ve rendering performance artırmak için data-heavy operasyonların server-side tarafa alınmasını destekledim.</li>
+
+          <li>Clean ve sürdürülebilir frontend standartlarını korumak için code review, teknik tartışma ve iterative iyileştirme süreçlerinde aktif rol aldım.</li>
+        </ul>
+      </div>
+      <hr class="job-divider">
+
+      <div class="job">
+        <div class="job-header">
+          <span class="job-title">Full Stack Developer — Patara Soft <em>(Remote, TR)</em></span>
+          <span class="job-date">Kas 2023 – Şub 2024</span>
+        </div>
+        <ul>
+          <li><strong>Blade / jQuery</strong> ile dynamic table, client-side filtering ve AJAX-driven CRUD operasyonlarını içeren modular bir admin panel frontend geliştirdim.</li>
+          <li><strong>i18n multi-language support</strong> uyguladım; <strong>semantic HTML</strong> ve <strong>dynamic meta tags</strong> kullanarak SEO iyileştirmeleri yaptım.</li>
+        </ul>
+      </div>
+      <hr class="job-divider">
+
+      <div class="job">
+        <div class="job-header">
+          <span class="job-title">Full Stack Developer — Kodlooper Yazılım <em>(Sakarya, TR)</em></span>
+          <span class="job-date">Ağu 2022 – Şub 2023</span>
+        </div>
+        <ul>
+          <li>SSR ve SPA mimarilerinde <strong>Vue.js (2/3 - Options API)</strong>, <strong>Nuxt.js</strong> ve <strong>React.js</strong> kullanarak frontend uygulamaları geliştirdim.
+          </li>
+
+          <li><strong>Redux Toolkit</strong> (<strong>createSlice</strong>, <strong>extraReducers</strong>, async request lifecycle) ve <strong>Vuex</strong> kullanarak öngörülebilir UI state geçişleri sağlayan yapılandırılmış state management kurguladım.
+          </li>
+
+          <li>Bir İkas teması geliştirirken <strong>GraphQL (Apollo Client)</strong> ile çalıştım; <strong>queries / mutations / subscriptions (Pub/Sub)</strong> yapıları ve client-side caching patternlerini kullandım.
+          </li>
+
+          <li>Mutation akışlarında async consistency korunurken etkileşimi hızlı tutmak için <strong>optimistic UI</strong> patternleri uyguladım.</li>
+
+          <li>Product listing sayfalarında <strong>asyncData/fetch</strong> patternleri kullanarak <strong>Nuxt.js</strong> tarafında SEO ve SSR davranışını iyileştirdim.</li>
+
+          <li>Windows ortamında birden fazla PHP versiyonunu tutarlı şekilde çalıştırmak için <strong>Docker</strong> ile containerized local development yapısını denedim.</li>
+        </ul>
+      </div>
+
+      <h2>Eğitim</h2>
+      <div class="edu-item">
+        <div class="edu-degree">Ön Lisans — Bilgisayar Programcılığı</div>
+        <div class="edu-school">Anadolu Üniversitesi &nbsp;|&nbsp; 2022 – 2024</div>
+      </div>
+      <div class="edu-item">
+        <div class="edu-degree">Lisans — İnşaat Mühendisliği</div>
+        <div class="edu-school">Eskişehir Osmangazi Üniversitesi &nbsp;|&nbsp; 2017 – 2021</div>
+      </div>
+
+      <h2>Sertifikalar</h2>
+      <ul class="cert-list">
+        <li>
+          FMSS Bilişim Front-end Practicum — Patika.dev &nbsp;|&nbsp; Haz 2023
+          <a class="cert-link" target="_blank" href="https://verified.sertifier.com/en/verify/46521604811802/">doğrula</a>
+        </li>
+        <li>
+          Advanced React — Meta &nbsp;|&nbsp; Nis 2023
+          <a class="cert-link" target="_blank" href="https://www.coursera.org/account/accomplishments/verify/TMTU3NHRB2RZ">doğrula</a>
+        </li>
+        <li>
+          Responsive Web Design — freeCodeCamp &nbsp;|&nbsp; Mayıs 2022
+          <a class="cert-link" target="_blank"
+            href="https://www.freecodecamp.org/certification/fcc831c2e93-c6a4-4347-9d06-a8a8779d18ec/responsive-web-design">doğrula</a>
+        </li>
+        <li>
+          Beginner Level Frontend Web Development Path — Patika.dev &nbsp;|&nbsp; Nis 2022
+          <a class="cert-link" target="_blank" href="https://academy.patika.dev/certificates/jFRH9mb">doğrula</a>
+        </li>
+      </ul>
+
+    </div><!-- /page-2 -->
+
+  </div>
+  <script>
+    // Keep initial view at top when the file is reopened/refreshed.
+    if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+
+    const resetScrollTop = () => window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+    window.addEventListener('load', resetScrollTop);
+    window.addEventListener('pageshow', resetScrollTop);
+    window.addEventListener('beforeprint', resetScrollTop);
+  </script>
+</body>
+
+</html>
+
+
+
+

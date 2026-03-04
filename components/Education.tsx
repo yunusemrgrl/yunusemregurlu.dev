@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import { motion } from 'framer-motion'
 import { GraduationCap, Award, ExternalLink, Calendar } from 'lucide-react'
@@ -21,7 +21,7 @@ const education = [
     field: 'Civil Engineering',
     period: '2017 – 2021',
     location: 'Eskişehir, TR',
-    icon: '🏛️',
+    icon: '🏛️',
     color: '#a855f7',
     note: 'Strong analytical and problem-solving foundations from engineering.',
   },
@@ -33,28 +33,28 @@ const certificates = [
     issuer: 'Patika.dev',
     date: 'Jun 2023',
     color: '#00f5ff',
-    credentialUrl: '#',
+    credentialUrl: 'https://verified.sertifier.com/en/verify/46521604811802/',
   },
   {
     name: 'Advanced React',
     issuer: 'Meta',
     date: 'Apr 2023',
     color: '#a855f7',
-    credentialUrl: '#',
+    credentialUrl: 'https://www.coursera.org/account/accomplishments/verify/TMTU3NHRB2RZ',
   },
   {
     name: 'Responsive Web Design',
     issuer: 'freeCodeCamp',
     date: 'May 2022',
     color: '#f59e0b',
-    credentialUrl: '#',
+    credentialUrl: 'https://www.freecodecamp.org/certification/fcc831c2e93-c6a4-4347-9d06-a8a8779d18ec/responsive-web-design',
   },
   {
     name: 'Beginner Level Frontend Web Development Path',
     issuer: 'Patika.dev',
     date: 'Apr 2022',
     color: '#10b981',
-    credentialUrl: '#',
+    credentialUrl: 'https://academy.patika.dev/certificates/jFRH9mb',
   },
 ]
 
@@ -87,7 +87,7 @@ export default function Education() {
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-10">
-          {/* ─── Education ─────────────────────────────────── */}
+          {/* â”€â”€â”€ Education â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
           <div>
             <motion.div
               initial={{ opacity: 0, x: -20 }}
@@ -150,7 +150,7 @@ export default function Education() {
             </div>
           </div>
 
-          {/* ─── Certificates ───────────────────────────────── */}
+          {/* â”€â”€â”€ Certificates â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
           <div>
             <motion.div
               initial={{ opacity: 0, x: 20 }}
@@ -201,6 +201,8 @@ export default function Education() {
                       </div>
                       <a
                         href={cert.credentialUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="text-white/20 hover:text-[#00f5ff] transition-colors duration-200"
                         aria-label="View credential"
                         onClick={(e) => e.stopPropagation()}
@@ -237,3 +239,4 @@ export default function Education() {
     </section>
   )
 }
+

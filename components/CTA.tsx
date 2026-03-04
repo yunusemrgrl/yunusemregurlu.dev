@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Mail, Phone, Download, Sparkles, ArrowRight } from 'lucide-react'
+import { Mail, Phone, Download, Sparkles, ArrowRight, Eye } from 'lucide-react'
 import { useTranslations, useLocale } from 'next-intl'
 
 export default function CTA() {
@@ -11,7 +11,7 @@ export default function CTA() {
     ? `/${process.env.NEXT_PUBLIC_CV_FRONTEND_TR}`
     : `/${process.env.NEXT_PUBLIC_CV_FRONTEND_EN}`
   const fullstackCvHref = locale === 'tr'
-    ? `/${process.env.NEXT_PUBLIC_CV_FULLSTACK_EN}`
+    ? `/${process.env.NEXT_PUBLIC_CV_FULLSTACK_TR}`
     : `/${process.env.NEXT_PUBLIC_CV_FULLSTACK_EN}`
   return (
     <section id="contact" className="relative py-32 px-6 overflow-hidden">
@@ -113,49 +113,65 @@ export default function CTA() {
         >
           <p className="mb-5 text-white/40 text-xs font-mono uppercase tracking-widest">{t('downloadCV')}</p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <motion.a
-              href={frontendCvHref}
-              download
-              className="inline-flex items-center gap-3 px-8 py-4 rounded-full font-bold text-base tracking-wide relative overflow-hidden group"
-              style={{ background: 'linear-gradient(135deg, #00f5ff, #0ea5e9)' }}
-              whileHover={{
-                scale: 1.05,
-                boxShadow: '0 0 40px rgba(0,245,255,0.5)',
-              }}
-              whileTap={{ scale: 0.97 }}
-            >
-              <span
-                className="absolute inset-0 opacity-0 group-hover:opacity-30 transition-opacity duration-500"
-                style={{
-                  background: 'linear-gradient(90deg, transparent, rgba(255,255,255,0.5), transparent)',
-                  transform: 'skewX(-20deg)',
-                }}
-              />
-              <Download size={18} className="text-[#0a0a0a]" />
-              <span className="text-[#0a0a0a]">{t('downloadFrontend')}</span>
-            </motion.a>
+            {/* Frontend CV */}
+            <div className="flex items-center gap-2">
+              <motion.a
+                href={frontendCvHref}
+                download
+                className="inline-flex items-center gap-3 px-8 py-4 rounded-full font-bold text-base tracking-wide relative overflow-hidden group"
+                style={{ background: 'linear-gradient(135deg, #00f5ff, #0ea5e9)' }}
+                whileHover={{ scale: 1.05, boxShadow: '0 0 40px rgba(0,245,255,0.5)' }}
+                whileTap={{ scale: 0.97 }}
+              >
+                <span
+                  className="absolute inset-0 opacity-0 group-hover:opacity-30 transition-opacity duration-500"
+                  style={{ background: 'linear-gradient(90deg, transparent, rgba(255,255,255,0.5), transparent)', transform: 'skewX(-20deg)' }}
+                />
+                <Download size={18} className="text-[#0a0a0a]" />
+                <span className="text-[#0a0a0a]">{t('downloadFrontend')}</span>
+              </motion.a>
+              <motion.a
+                href={frontendCvHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Preview"
+                className="w-12 h-12 rounded-full flex items-center justify-center border border-[#00f5ff]/30 text-[#00f5ff] hover:bg-[#00f5ff]/10 transition-colors duration-200"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Eye size={18} />
+              </motion.a>
+            </div>
 
-            <motion.a
-              href={fullstackCvHref}
-              download
-              className="inline-flex items-center gap-3 px-8 py-4 rounded-full font-bold text-base tracking-wide relative overflow-hidden group"
-              style={{ background: 'linear-gradient(135deg, #a855f7, #ec4899)' }}
-              whileHover={{
-                scale: 1.05,
-                boxShadow: '0 0 40px rgba(168,85,247,0.5)',
-              }}
-              whileTap={{ scale: 0.97 }}
-            >
-              <span
-                className="absolute inset-0 opacity-0 group-hover:opacity-30 transition-opacity duration-500"
-                style={{
-                  background: 'linear-gradient(90deg, transparent, rgba(255,255,255,0.5), transparent)',
-                  transform: 'skewX(-20deg)',
-                }}
-              />
-              <Download size={18} className="text-[#0a0a0a]" />
-              <span className="text-[#0a0a0a]">{t('downloadFullstack')}</span>
-            </motion.a>
+            {/* Full Stack CV */}
+            <div className="flex items-center gap-2">
+              <motion.a
+                href={fullstackCvHref}
+                download
+                className="inline-flex items-center gap-3 px-8 py-4 rounded-full font-bold text-base tracking-wide relative overflow-hidden group"
+                style={{ background: 'linear-gradient(135deg, #a855f7, #ec4899)' }}
+                whileHover={{ scale: 1.05, boxShadow: '0 0 40px rgba(168,85,247,0.5)' }}
+                whileTap={{ scale: 0.97 }}
+              >
+                <span
+                  className="absolute inset-0 opacity-0 group-hover:opacity-30 transition-opacity duration-500"
+                  style={{ background: 'linear-gradient(90deg, transparent, rgba(255,255,255,0.5), transparent)', transform: 'skewX(-20deg)' }}
+                />
+                <Download size={18} className="text-[#0a0a0a]" />
+                <span className="text-[#0a0a0a]">{t('downloadFullstack')}</span>
+              </motion.a>
+              <motion.a
+                href={fullstackCvHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Preview"
+                className="w-12 h-12 rounded-full flex items-center justify-center border border-[#a855f7]/30 text-[#a855f7] hover:bg-[#a855f7]/10 transition-colors duration-200"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Eye size={18} />
+              </motion.a>
+            </div>
           </div>
 
           <p className="mt-4 text-white/25 text-xs font-mono">

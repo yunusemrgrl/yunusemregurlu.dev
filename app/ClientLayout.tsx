@@ -25,7 +25,7 @@ export default function ClientLayout({ children }: { children: ReactNode }) {
   }, [])
 
   return (
-    <NextIntlClientProvider locale={locale} messages={messages[locale]}>
+    <NextIntlClientProvider locale={locale} messages={messages[locale]} timeZone="Europe/Istanbul">
       {children}
     </NextIntlClientProvider>
   )

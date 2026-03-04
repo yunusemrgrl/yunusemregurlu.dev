@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yunus Emre G&Uuml;RL&Uuml; &#8212; Full Stack Developer CV</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap');
+
+    :root {
+      --accent: #D4421A;
+      --text: #1A1A1A;
+      --muted: #5A5A5A;
+      --border: #E5E3DE;
+      --bg: #FAFAF8;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      font-size: 16px;
+    }
+
+    body {
+      background: var(--bg);
+      font-family: 'Nunito', system-ui, sans-serif;
+      font-weight: 400;
+      color: var(--text);
+      line-height: 1.58;
+    }
+
+    .cv-page {
+      max-width: 820px;
+      margin: 0 auto;
+      background: #fff;
+    }
+
+    .page-1 {
+      padding: 2.8rem 3.5rem 1.7rem 3.5rem;
+    }
+
+    .page-2 {
+      padding: 2.3rem 3.5rem 2.4rem 3.5rem;
+    }
+
+    .header {
+      margin-bottom: 1.35rem;
+    }
+
+    h1 {
+      font-family: 'Nunito', system-ui, sans-serif;
+      font-size: 2.3rem;
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      color: var(--text);
+      line-height: 1.1;
+      margin-bottom: 0.25rem;
+    }
+
+    .subtitle {
+      font-size: 0.92rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.6rem;
+    }
+
+    .contact {
+      font-size: 0.8rem;
+      color: var(--muted);
+      line-height: 2;
+    }
+
+    .contact a {
+      color: var(--muted);
+      text-decoration: none;
+      border-bottom: 1px solid #cfcac0;
+      font-weight: 500;
+    }
+
+    .contact a::after,
+    .cert-link::after {
+      content: "↗";
+      display: inline-block;
+      margin-left: 0.22rem;
+      font-size: 0.78em;
+      line-height: 1;
+      vertical-align: text-top;
+      opacity: 0.82;
+    }
+
+    .sep {
+      margin: 0 0.4rem;
+      color: var(--border);
+    }
+
+    h2 {
+      font-family: 'Nunito', system-ui, sans-serif;
+      font-size: 0.63rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-top: 1.45rem;
+      margin-bottom: 0.7rem;
+      padding-bottom: 0.35rem;
+      border-bottom: 1.5px solid var(--accent);
+    }
+
+    .summary {
+      padding-top: 0.24rem;
+    }
+
+    .summary p {
+      font-size: 0.855rem;
+      line-height: 1.74;
+      margin: 0.34rem 0 0.25rem 0;
+    }
+
+    .skills-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.79rem;
+    }
+
+    .skills-table tr {
+      border-bottom: 1px solid var(--border);
+    }
+
+    .skills-table tr:last-child {
+      border-bottom: none;
+    }
+
+    .skills-table td {
+      padding: 0.42rem 0.48rem;
+      vertical-align: top;
+      line-height: 1.48;
+    }
+
+    .skills-table td:first-child {
+      white-space: nowrap;
+      font-weight: 600;
+      font-size: 0.66rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--muted);
+      width: 156px;
+      padding-right: 0.9rem;
+    }
+
+    .job {
+      margin-bottom: 1rem;
+    }
+
+    .page-1>h2+.job,
+    .page-2>h2+.job {
+      margin-top: 0.42rem;
+    }
+
+    .job-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 0.15rem;
+      gap: 0.8rem;
+    }
+
+    .job-title {
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .job-title em {
+      font-style: normal;
+      font-weight: 300;
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+
+    .job-date {
+      font-size: 0.74rem;
+      color: var(--muted);
+      font-style: italic;
+      white-space: nowrap;
+    }
+
+    .job ul,
+    .cert-list {
+      list-style: none;
+      margin-top: 0.35rem;
+    }
+
+    .job ul li,
+    .cert-list li {
+      position: relative;
+      padding-left: 0.95rem;
+      font-size: 0.82rem;
+      color: var(--text);
+      margin-bottom: 0.26rem;
+      line-height: 1.54;
+    }
+
+    .job ul li::before,
+    .cert-list li::before {
+      content: '-';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+    }
+
+    .job-divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 0.95rem 0;
+    }
+
+    strong {
+      font-weight: 700;
+      color: #111;
+    }
+
+    .edu-item {
+      margin-bottom: 0.68rem;
+    }
+
+    .edu-degree {
+      font-size: 0.875rem;
+      font-weight: 600;
+    }
+
+    .edu-school {
+      font-size: 0.805rem;
+      color: var(--muted);
+      margin-top: 0.08rem;
+    }
+
+    .cert-link {
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid #f0b8a8;
+      font-size: 0.72rem;
+      margin-left: 0.38rem;
+      font-weight: 600;
+    }
+
+    @media print {
+      @page {
+        size: A4;
+        margin: 0;
+      }
+
+      html {
+        font-size: 11.65px;
+      }
+
+      body {
+        background: #fff;
+        color: #111;
+        line-height: 1.45;
+      }
+
+      .cv-page {
+        max-width: 100%;
+        padding: 0;
+      }
+
+      .page-1 {
+        padding: 0.86cm 1.08cm 0.5cm 1.08cm;
+        page-break-after: always;
+        break-after: page;
+      }
+
+      .page-2 {
+        padding: 0.98cm 1.08cm 0.7cm 1.08cm;
+      }
+
+      h1 {
+        font-size: 2.04rem;
+        margin-bottom: 0.16rem;
+      }
+
+      h2 {
+        font-size: 0.67rem;
+        margin-top: 1.02rem;
+        margin-bottom: 0.5rem;
+        padding-bottom: 0.22rem;
+      }
+
+      .header {
+        margin-bottom: 0.82rem;
+      }
+
+      .contact {
+        line-height: 1.56;
+      }
+
+      .summary {
+        padding-top: 0.14rem;
+      }
+
+      .summary p {
+        line-height: 1.52;
+        margin: 0.16rem 0 0.2rem 0;
+      }
+
+      .skills-table {
+        font-size: 0.765rem;
+      }
+
+      .skills-table td {
+        padding: 0.22rem 0.35rem;
+      }
+
+      .job,
+      .edu-item,
+      .cert-list li,
+      .skills-table {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+
+      .job {
+        margin-bottom: 0.62rem;
+      }
+
+      .job-header {
+        margin-bottom: 0.06rem;
+      }
+
+      .job-title {
+        font-size: 0.88rem;
+      }
+
+      .job-date {
+        font-size: 0.7rem;
+      }
+
+      .job ul,
+      .cert-list {
+        margin-top: 0.24rem;
+      }
+
+      .job ul li,
+      .cert-list li,
+      .edu-item {
+        margin-bottom: 0.14rem;
+      }
+
+      .job ul li,
+      .cert-list li {
+        padding-left: 0.82rem;
+      }
+
+      .job-divider {
+        margin: 0.48rem 0;
+      }
+
+      .cert-link {
+        font-size: 0.67rem;
+      }
+
+      .page-2 > h2:first-child {
+        margin-top: 0;
+      }
+    }
+
+    @media screen {
+      .page-1 {
+        border-bottom: 2px dashed #ddd;
+        margin-bottom: 1.4rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="cv-page">
+
+    <div class="page-1">
+      <div class="header">
+        <h1>Yunus Emre G&Uuml;RL&Uuml;</h1>
+        <p class="subtitle">Full Stack Developer</p>
+        <p class="contact">
+          <a href="mailto:yunusemregurlu@gmail.com">yunusemregurlu@gmail.com</a>
+          <span class="sep">|</span>
+          Sakarya, TR
+          <span class="sep">|</span>
+          +90 539 462 74 46
+          <br>
+          <a href="https://yunusemregurlu.dev">yunusemregurlu.dev</a>
+          <span class="sep">|</span>
+          <a href="https://linkedin.com/in/yunusemregurlu">LinkedIn</a>
+          <span class="sep">|</span>
+          <a href="https://github.com/yunusemrgrl">GitHub</a>
+          <span class="sep">|</span>
+          <a href="https://medium.com/@yunusemregurlu">Medium</a>
+        </p>
+      </div>
+
+      <h2>&Ouml;zet</h2>
+      <div class="summary">
+        <p><strong>PHP</strong>, <strong>Laravel</strong> (OOP, queues/jobs/events, notifications),
+          <strong>MySQL/MongoDB/Redis</strong> ve <strong>Vue.js / Nuxt.js</strong>,
+          <strong>React.js / Next.js</strong> gibi modern JavaScript framework'lerinde sa&#287;lam bir altyap&#305;ya sahip,
+          motive ve hands-on bir Full Stack Developer'&#305;m. G&uuml;&ccedil;l&uuml; backend geli&#351;tirme prati&#287;i,
+          <strong>API integration</strong> deneyimi (including <strong>GraphQL</strong>) ve scalable, maintainable sistem
+          tasar&#305;m&#305;na dair g&uuml;&ccedil;l&uuml; bir bak&#305;&#351; a&ccedil;&#305;s&#305; sunuyorum. <strong>clean code</strong>,
+          <strong>performance optimization</strong> ve <strong>Git</strong> ile modern workflow'lar i&ccedil;inde i&#351; birli&#287;ine
+          dayal&#305; geli&#351;tirme konular&#305;na &ouml;nem veriyorum. <strong>CI/CD</strong> prensiplerine a&#351;inay&#305;m ve bunlar&#305; daha
+          etkili uygulama becerimi s&uuml;rekli geli&#351;tiriyorum. Analitik yakla&#351;an, self-motivated bir problem solver olarak
+          team-based ortamlarda verimli &ccedil;al&#305;&#351;&#305;yorum.
+        </p>
+      </div>
+
+      <h2>Yetkinlikler</h2>
+      <table class="skills-table">
+        <tr>
+          <td>Backend</td>
+          <td>PHP, Laravel, OOP, Queues/Jobs, Events/Observers, Microservices, Event-driven</td>
+        </tr>
+        <tr>
+          <td>Databases</td>
+          <td>MySQL, MongoDB, Redis, Eloquent ORM</td>
+        </tr>
+        <tr>
+          <td>Frontend</td>
+          <td>Vue.js, Pinia, React.js, Next.js, Nuxt.js, Livewire, Tailwind CSS</td>
+        </tr>
+        <tr>
+          <td>Integrations</td>
+          <td>REST/GraphQL APIs, Firebase, PWA/Service Workers</td>
+        </tr>
+        <tr>
+          <td>Tools &amp; AI</td>
+          <td>Git, Jira, Agile, Supervisor, Cloud Panel, Hetzner Storage/S3, Claude Code, Codex, Cursor</td>
+        </tr>
+      </table>
+
+      <h2>&#304;&#351; Deneyimi</h2>
+
+      <div class="job">
+        <div class="job-header">
+          <span class="job-title">Payzec <em>(Remote, TR)</em></span>
+          <span class="job-date">Full Stack Developer | A&#287;u 2023 - Tem 2025</span>
+        </div>
+        <ul>
+          <li>Startup giri&#351;imi olarak geli&#351;tirilen unified payment platform (monorepo) &uuml;zerinde &ccedil;al&#305;&#351;t&#305;m;
+            <strong>Laravel</strong> backend taraf&#305;nda queues/jobs (Redis), events/observers, async transaction
+            processing ve notifications (Mailgun + Firebase Cloud Messaging) ak&#305;&#351;lar&#305;n&#305; implemente ettim.</li>
+          <li><strong>Omnipay</strong> abstraction &uuml;zerinden 14+ payment gateway entegrasyonuna katk&#305; sundum; 3DS
+            Secure, refunds, multi-currency, installments ve secure card vaulting ak&#305;&#351;lar&#305;n&#305; destekledim.</li>
+          <li><strong>Vue.js/Pinia</strong> ile one-click checkout frontend'i geli&#351;tirdim; real-time validation, custom
+            component'ler ve async state management &uuml;zerinde &ccedil;al&#305;&#351;t&#305;m.</li>
+          <li><strong>WooCommerce</strong> payment gateway plugin'i &uuml;zerinde &ccedil;al&#305;&#351;t&#305;m; <strong>RESTful APIs</strong> ile
+            ileti&#351;im kuran, CSRF token, interceptors ve error handling i&ccedil;eren bir <strong>Axios</strong> wrapper
+            geli&#351;tirdim.</li>
+          <li><strong>MongoDB/Firestore</strong> real-time sync ve <strong>PWA/Service Workers</strong> kullanarak
+            abandoned cart recovery ve offline push notification ak&#305;&#351;lar&#305; ekledim.</li>
+        </ul>
+      </div>
+      <hr class="job-divider">
+
+      <div class="job">
+        <div class="job-header">
+          <span class="job-title">Energetisch.fit <em>(Remote, AT)</em></span>
+          <span class="job-date">Full Stack Developer | Eki 2024 - Tem 2025</span>
+        </div>
+        <ul>
+          <li>Terapi rezervasyon sisteminde cart, PDF/email flows ve improvement calculations taraf&#305;ndaki kritik
+            UI/data integrity hatalar&#305;n&#305; &ccedil;&ouml;zd&uuml;m.</li>
+          <li>Y&uuml;ksek hacimli bir sistemde (20GB+ DB) yava&#351; cron job ve DB sorgular&#305;n&#305; optimize ettim; indexing ekleyerek
+            execution time s&uuml;relerini d&uuml;&#351;&uuml;rd&uuml;m.</li>
+          <li>Legacy file handling yap&#305;s&#305;n&#305; <strong>Laravel</strong> Storage Facade + <strong>Hetzner S3</strong> sync
+            job'lar&#305;na migrate ettim.</li>
+          <li>Cart/treatment state'leri i&ccedil;in Livewire ile optimistic real-time UI updates geli&#351;tirdim.</li>
+          <li>Tekrarlayan kodlar&#305; reusable <strong>Livewire/Blade</strong> component'lere refactor ettim; queue'lar i&ccedil;in
+            Supervisor konfig&uuml;rasyonu yapt&#305;m.</li>
+        </ul>
+      </div>
+      <hr class="job-divider">
+
+      <div class="job">
+        <div class="job-header">
+          <span class="job-title">Al&#305;&#351;gidi&#351; <em>(&#304;stanbul, TR)</em></span>
+          <span class="job-date">Frontend Developer | Mar 2024 - Tem 2024</span>
+        </div>
+        <ul>
+          <li><strong>Next.js</strong> ile high-traffic e-commerce &ouml;zellikleri geli&#351;tirdim; code splitting, image
+            optimization, dynamic routing ve skeleton screens &uuml;zerinde &ccedil;al&#305;&#351;t&#305;m.</li>
+          <li>Pixel-perfect <strong>Figma</strong> tasar&#305;mlar&#305;n&#305; responsive ve reusable component'lere d&ouml;n&uuml;&#351;t&uuml;rd&uuml;m;
+            <strong>Atomic Design</strong> ve Component Library yakla&#351;&#305;m&#305;n&#305; kulland&#305;m.</li>
+          <li><strong>Zustand</strong>, <strong>React Context API</strong> ve <strong>TanStack Query/SWR</strong> ile
+            ileri seviye state/data y&ouml;netimi, real-time polling ve memoization ak&#305;&#351;lar&#305;n&#305; y&ouml;nettim.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-header">
+          <span class="job-title">Patara Soft <em>(Remote, TR)</em></span>
+          <span class="job-date">Full Stack Developer | Kas 2023 - &#350;ub 2024</span>
+        </div>
+        <ul>
+          <li><strong>Blade/jQuery</strong> ile modular admin panel frontend geli&#351;tirdim; dynamic table, filtering ve
+            <strong>AJAX</strong> CRUD ak&#305;&#351;lar&#305; &uuml;zerinde &ccedil;al&#305;&#351;t&#305;m.</li>
+          <li><strong>i18n</strong> multi-language support ve <strong>SEO</strong> geli&#351;tirmeleri yapt&#305;m; semantic HTML
+            ve dynamic meta tags kulland&#305;m.</li>
+          <li>Verimli image upload/management ak&#305;&#351;lar&#305; kurgulad&#305;m.</li>
+        </ul>
+      </div>
+
+      <hr class="job-divider">
+
+      <div class="job">
+        <div class="job-header">
+          <span class="job-title">Kodlooper Yaz&#305;l&#305;m <em>(Sakarya, TR)</em></span>
+          <span class="job-date">Full Stack Developer | A&#287;u 2022 - &#350;ub 2023</span>
+        </div>
+        <ul>
+          <li><strong>Nuxt.js</strong>, <strong>Vue.js</strong> ve <strong>React.js</strong> ile
+            <strong>SSR/SPA</strong> mimarilerinde web uygulamalar&#305; geli&#351;tirdim ve bak&#305;m&#305;n&#305; yapt&#305;m.</li>
+          <li><strong>Vuex/Redux Toolkit</strong> ile scalable client-side <strong>state management</strong> yap&#305;lar&#305;
+            kurdum.</li>
+          <li><strong>GraphQL</strong> ve <strong>RESTful APIs</strong> entegrasyonlar&#305; ger&ccedil;ekle&#351;tirdim.</li>
+        </ul>
+      </div>
+
+      <h2>E&#287;itim</h2>
+      <div class="edu-item">
+        <div class="edu-degree">&Ouml;n Lisans &mdash; Bilgisayar Programc&#305;l&#305;&#287;&#305;</div>
+        <div class="edu-school">Anadolu &Uuml;niversitesi &nbsp;|&nbsp; 2022 - 2024</div>
+      </div>
+      <div class="edu-item">
+        <div class="edu-degree">Lisans &mdash; &#304;n&#351;aat M&uuml;hendisli&#287;i</div>
+        <div class="edu-school">Eski&#351;ehir Osmangazi &Uuml;niversitesi &nbsp;|&nbsp; 2017 - 2021</div>
+      </div>
+
+    </div>
+
+    <div class="page-2">
+      <h2>Sertifikalar</h2>
+      <ul class="cert-list">
+        <li>
+          FMSS Bili&#351;im Front-end Practicum &mdash; Patika.dev &nbsp;|&nbsp; Haz 2023
+          <a class="cert-link" target="_blank" href="https://verified.sertifier.com/en/verify/46521604811802/">do&#287;rula</a>
+        </li>
+        <li>
+          Advanced React &mdash; Meta &nbsp;|&nbsp; Nis 2023
+          <a class="cert-link" target="_blank" href="https://www.coursera.org/account/accomplishments/verify/TMTU3NHRB2RZ">do&#287;rula</a>
+        </li>
+        <li>
+          Responsive Web Design &mdash; freeCodeCamp &nbsp;|&nbsp; May&#305;s 2022
+          <a class="cert-link" target="_blank"
+            href="https://www.freecodecamp.org/certification/fcc831c2e93-c6a4-4347-9d06-a8a8779d18ec/responsive-web-design">do&#287;rula</a>
+        </li>
+        <li>
+          Beginner Level Frontend Web Development Path &mdash; Patika.dev &nbsp;|&nbsp; Nis 2022
+          <a class="cert-link" target="_blank" href="https://academy.patika.dev/certificates/jFRH9mb">do&#287;rula</a>
+        </li>
+      </ul>
+
+      <h2>Referanslar</h2>
+      <ul class="cert-list">
+        <li>&Ouml;mer G&uuml;l&ccedil;i&ccedil;ek &mdash; Machinarium &mdash; Frontend Team Lead</li>
+        <li>Osman Feyyaz Onur &mdash; Getir &mdash; iOS Developer</li>
+      </ul>
+
+      <h2>Askerlik Durumu</h2>
+      <div class="edu-item">
+        <div class="edu-school" style="margin-top:0;">Tamamland&#305;</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+    const resetScrollTop = () => window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+    window.addEventListener('load', resetScrollTop);
+    window.addEventListener('pageshow', resetScrollTop);
+    window.addEventListener('beforeprint', resetScrollTop);
+  </script>
+</body>
+
+</html>
