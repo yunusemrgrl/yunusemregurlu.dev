@@ -2,10 +2,17 @@
 
 import { motion } from 'framer-motion'
 import { Mail, Phone, Download, Sparkles, ArrowRight } from 'lucide-react'
-import { useTranslations } from 'next-intl'
+import { useTranslations, useLocale } from 'next-intl'
 
 export default function CTA() {
   const t = useTranslations('contact')
+  const locale = useLocale()
+  const frontendCvHref = locale === 'tr'
+    ? `/${process.env.NEXT_PUBLIC_CV_FRONTEND_TR}`
+    : `/${process.env.NEXT_PUBLIC_CV_FRONTEND_EN}`
+  const fullstackCvHref = locale === 'tr'
+    ? `/${process.env.NEXT_PUBLIC_CV_FULLSTACK_EN}`
+    : `/${process.env.NEXT_PUBLIC_CV_FULLSTACK_EN}`
   return (
     <section id="contact" className="relative py-32 px-6 overflow-hidden">
       {/* Animated gradient background */}
@@ -107,7 +114,7 @@ export default function CTA() {
           <p className="mb-5 text-white/40 text-xs font-mono uppercase tracking-widest">{t('downloadCV')}</p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <motion.a
-              href="/Yunus_Emre_Gurlu_Frontend_Developer.pdf"
+              href={frontendCvHref}
               download
               className="inline-flex items-center gap-3 px-8 py-4 rounded-full font-bold text-base tracking-wide relative overflow-hidden group"
               style={{ background: 'linear-gradient(135deg, #00f5ff, #0ea5e9)' }}
@@ -129,7 +136,7 @@ export default function CTA() {
             </motion.a>
 
             <motion.a
-              href="/YunusEmreGurlu_FullStack_Developer_CV.pdf"
+              href={fullstackCvHref}
               download
               className="inline-flex items-center gap-3 px-8 py-4 rounded-full font-bold text-base tracking-wide relative overflow-hidden group"
               style={{ background: 'linear-gradient(135deg, #a855f7, #ec4899)' }}

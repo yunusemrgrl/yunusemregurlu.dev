@@ -34,6 +34,11 @@ jobs:
 
       - name: Build Next.js
         run: npm run build
+        env:
+          NEXT_PUBLIC_CV_FRONTEND_TR: ${{ vars.CV_FRONTEND_TR || 'YunusEmreGurlu_Frontend_Developer_CV_2026_TR.pdf' }}
+          NEXT_PUBLIC_CV_FRONTEND_EN: ${{ vars.CV_FRONTEND_EN || 'YunusEmreGurlu_Frontend_Developer_CV_2026_EN.pdf' }}
+          NEXT_PUBLIC_CV_FULLSTACK_TR: ${{ vars.CV_FULLSTACK_TR || 'YunusEmreGurlu_Full_Stack_Developer_CV_2026_EN.pdf' }}
+          NEXT_PUBLIC_CV_FULLSTACK_EN: ${{ vars.CV_FULLSTACK_EN || 'YunusEmreGurlu_Full_Stack_Developer_CV_2026_EN.pdf' }}
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
