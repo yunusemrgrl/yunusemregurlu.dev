@@ -2,6 +2,7 @@
   "nav": {
     "about": "About",
     "skills": "Skills",
+    "projects": "Projects",
     "experience": "Experience",
     "education": "Education",
     "contact": "Contact",
@@ -28,6 +29,7 @@
     "bio2": "Skilled in developing scalable, maintainable, and performance-oriented frontend architectures, with solid experience in state management, API integration (REST & GraphQL), and component-driven UI development.",
     "bio3": "Passionate about clean code, performance optimization, and translating design systems into reusable frontend components. Experienced in collaborative development environments using Git and modern workflows, with practical exposure to CI/CD processes.",
     "bio4": "Known for strong analytical problem-solving skills, adaptability, and a continuous drive to learn and grow within frontend-focused teams.",
+    "availability": "Sakarya, TR — Available for remote",
     "stats": {
       "experience": "Years Experience",
       "companies": "Companies",
@@ -47,7 +49,7 @@
     "subtitle": "Hover over a skill to explore — each card reveals the depth of experience behind it."
   },
   "experience": {
-    "tag": "03 / Experience",
+    "tag": "04 / Experience",
     "title": "Career",
     "titleHighlight": "Journey",
     "subtitle": "Click any card to expand the details.",
@@ -55,7 +57,7 @@
     "onsite": "On-site"
   },
   "education": {
-    "tag": "04 / Education & Certificates",
+    "tag": "05 / Education & Certificates",
     "title": "Learning",
     "titleHighlight": "Path",
     "educationTitle": "Education",
@@ -63,7 +65,7 @@
     "continuousLearning": "Continuously learning — always leveling up 🚀"
   },
   "contact": {
-    "tag": "05 / Contact",
+    "tag": "06 / Contact",
     "title": "Let's build something amazing together?",
     "subtitle": "I'm open to new projects, interesting ideas, and creative collaborations. Don't wait for the perfect moment to build something great!",
     "email": "Email",

@@ -35,6 +35,9 @@ export const metadata: Metadata = {
     description: 'Frontend Developer specializing in React & Vue ecosystems.',
     type: 'website',
   },
+  icons: {
+    icon: '/favicon.svg',
+  },
 }
 
 export default function RootLayout({

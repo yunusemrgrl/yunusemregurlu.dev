@@ -2,6 +2,7 @@
   "nav": {
     "about": "Hakkımda",
     "skills": "Yetenekler",
+    "projects": "Projeler",
     "experience": "Deneyim",
     "education": "Eğitim",
     "contact": "İletişim",
@@ -28,6 +29,7 @@
     "bio2": "Durum yönetimi, API entegrasyonu (REST & GraphQL) ve bileşen odaklı UI geliştirmede sağlam deneyimle ölçeklenebilir, sürdürülebilir ve performans odaklı frontend mimarileri geliştirmede yetenekli.",
     "bio3": "Temiz kod, performans optimizasyonu ve tasarım sistemlerini yeniden kullanılabilir frontend bileşenlerine dönüştürme konusunda tutkuluyum. Git ve modern iş akışlarını kullanan işbirlikçi geliştirme ortamlarında deneyimliyim, CI/CD süreçlerine pratik maruziyetim var.",
     "bio4": "Güçlü analitik problem çözme becerileri, uyum yeteneği ve frontend odaklı ekiplerde öğrenme ve büyüme konusunda sürekli bir dürtü ile tanınırım.",
+    "availability": "Sakarya, TR — uzaktan çalışmaya uygun",
     "stats": {
       "experience": "Yıl Deneyim",
       "companies": "Şirket",
@@ -47,7 +49,7 @@
     "subtitle": "Keşfetmek için bir yeteneğin üzerine gelin — her kart arkasındaki deneyimin derinliğini ortaya çıkarır."
   },
   "experience": {
-    "tag": "03 / Deneyim",
+    "tag": "04 / Deneyim",
     "title": "Kariyer",
     "titleHighlight": "Yolculuğu",
     "subtitle": "Detayları genişletmek için herhangi bir karta tıklayın.",
@@ -55,7 +57,7 @@
     "onsite": "Yerinde"
   },
   "education": {
-    "tag": "04 / Eğitim ve Sertifikalar",
+    "tag": "05 / Eğitim ve Sertifikalar",
     "title": "Öğrenme",
     "titleHighlight": "Yolu",
     "educationTitle": "Eğitim",
@@ -63,7 +65,7 @@
     "continuousLearning": "Sürekli öğreniyor — her zaman seviye atlıyorum 🚀"
   },
   "contact": {
-    "tag": "05 / İletişim",
+    "tag": "06 / İletişim",
     "title": "Birlikte harika bir şeyler yapalım mı?",
     "subtitle": "Yeni projelere, ilginç fikirlere ve yaratıcı işbirliklerine açığım. Bir şeyler inşa etmek için doğru zamanı beklemeyin!",
     "email": "E-posta",

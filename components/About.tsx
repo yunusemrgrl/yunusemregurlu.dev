@@ -15,6 +15,7 @@ const fadeUp = {
 
 export default function About() {
   const t = useTranslations('about')
+  const bioParagraphs = [t('bio1'), t('bio2'), t('bio3'), t('bio4')]
   
   const badges = [
     { icon: <Code2 size={14} />, text: t('badges.currentlyBuilding') },
@@ -60,32 +61,11 @@ export default function About() {
             transition={{ duration: 0.7 }}
             className="space-y-5"
           >
-            <p className="text-white/70 leading-relaxed text-base">
-              Highly motivated and hands-on{' '}
-              <span className="text-[#00f5ff] font-semibold">Frontend Developer</span> with
-              strong experience building{' '}
-              <span className="text-white/90">production-ready user interfaces</span> using
-              modern JavaScript frameworks such as{' '}
-              <span className="text-[#a855f7] font-semibold">React.js / Next.js</span> and{' '}
-              <span className="text-[#a855f7] font-semibold">Vue.js / Nuxt.js</span>.
-            </p>
-            <p className="text-white/70 leading-relaxed text-base">
-              Skilled in developing scalable, maintainable, and{' '}
-              <span className="text-white/90">performance-oriented frontend architectures</span>,
-              with solid experience in state management, API integration (REST & GraphQL),
-              and component-driven UI development.
-            </p>
-            <p className="text-white/70 leading-relaxed text-base">
-              Passionate about clean code, performance optimization, and translating design
-              systems into reusable frontend components. Experienced in collaborative
-              development environments using Git and modern workflows, with practical exposure
-              to CI/CD processes.
-            </p>
-            <p className="text-white/70 leading-relaxed text-base">
-              Known for strong analytical problem-solving skills, adaptability, and a{' '}
-              <span className="text-[#00f5ff]">continuous drive to learn and grow</span> within
-              frontend-focused teams.
-            </p>
+            {bioParagraphs.map((paragraph) => (
+              <p key={paragraph} className="text-white/70 leading-relaxed text-base">
+                {paragraph}
+              </p>
+            ))}
 
             {/* Stats row */}
             <div className="flex gap-8 pt-4">
@@ -130,7 +110,7 @@ export default function About() {
                   <p className="text-[#00f5ff] text-sm font-mono mt-0.5">Frontend Developer</p>
                   <p className="text-white/40 text-xs mt-1 flex items-center gap-1">
                     <span className="w-1.5 h-1.5 rounded-full bg-green-400 inline-block animate-pulse" />
-                    Sakarya, TR — Available for remote
+                    {t('availability')}
                   </p>
                 </div>
               </div>

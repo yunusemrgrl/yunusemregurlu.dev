@@ -153,7 +153,7 @@ export default function Hero() {
   const typedRole = useTyping(roles, 75, 2200)
 
   const scrollToProjects = () => {
-    document.getElementById('experience')?.scrollIntoView({ behavior: 'smooth' })
+    document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })
   }
   const scrollToContact = () => {
     document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
@@ -281,7 +281,7 @@ export default function Hero() {
         initial={{ opacity: 0, x: 30 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ delay: 1.2, duration: 0.6 }}
-        className="fixed right-6 bottom-12 z-20 flex flex-col gap-3"
+        className="fixed right-6 bottom-12 z-20 hidden flex-col gap-3 xl:flex"
       >
         <SocialLink
           href="https://www.linkedin.com/in/yunusemregurlu"
