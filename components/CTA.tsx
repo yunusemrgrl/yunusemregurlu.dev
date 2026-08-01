@@ -4,15 +4,32 @@ import { motion } from 'framer-motion'
 import { Mail, Phone, Download, Sparkles, ArrowRight, Eye } from 'lucide-react'
 import { useTranslations, useLocale } from 'next-intl'
 
+const DEFAULT_CV_FILES = {
+  frontendTr: 'YunusEmreGurlu_Frontend_Developer_CV_2026_TR.pdf',
+  frontendEn: 'YunusEmreGurlu_Frontend_Developer_CV_2026_EN.pdf',
+  fullstackTr: 'YunusEmreGurlu_Full_Stack_Developer_CV_2026_TR.pdf',
+  fullstackEn: 'YunusEmreGurlu_Full_Stack_Developer_CV_2026_EN.pdf',
+} as const
+
+function resolveCvHref(value: string | undefined, fallback: string) {
+  const normalized = value?.trim() || fallback
+
+  if (/^https?:\/\//.test(normalized)) {
+    return normalized
+  }
+
+  return normalized.startsWith('/') ? normalized : `/${normalized}`
+}
+
 export default function CTA() {
   const t = useTranslations('contact')
   const locale = useLocale()
   const frontendCvHref = locale === 'tr'
-    ? `/${process.env.NEXT_PUBLIC_CV_FRONTEND_TR}`
-    : `/${process.env.NEXT_PUBLIC_CV_FRONTEND_EN}`
+    ? resolveCvHref(process.env.NEXT_PUBLIC_CV_FRONTEND_TR, DEFAULT_CV_FILES.frontendTr)
+    : resolveCvHref(process.env.NEXT_PUBLIC_CV_FRONTEND_EN, DEFAULT_CV_FILES.frontendEn)
   const fullstackCvHref = locale === 'tr'
-    ? `/${process.env.NEXT_PUBLIC_CV_FULLSTACK_TR}`
-    : `/${process.env.NEXT_PUBLIC_CV_FULLSTACK_EN}`
+    ? resolveCvHref(process.env.NEXT_PUBLIC_CV_FULLSTACK_TR, DEFAULT_CV_FILES.fullstackTr)
+    : resolveCvHref(process.env.NEXT_PUBLIC_CV_FULLSTACK_EN, DEFAULT_CV_FILES.fullstackEn)
   return (
     <section id="contact" className="relative py-32 px-6 overflow-hidden">
       {/* Animated gradient background */}

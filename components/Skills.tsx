@@ -65,10 +65,10 @@ function SkillCard({ skill, index }: { skill: Skill; index: number }) {
         transform: `perspective(1000px) rotateX(${tilt.x}deg) rotateY(${tilt.y}deg)`,
         transition: hovered ? 'transform 0.1s ease-out' : 'transform 0.5s ease-out',
       }}
-      className="relative group cursor-default"
+      className="relative group cursor-default h-full"
     >
       <div
-        className={`relative p-5 rounded-2xl glass-card border transition-all duration-300 overflow-hidden ${
+        className={`relative h-full p-5 rounded-2xl glass-card border transition-all duration-300 overflow-hidden ${
           hovered ? 'border-opacity-60' : 'border-white/5'
         }`}
         style={{
@@ -114,7 +114,7 @@ function SkillCard({ skill, index }: { skill: Skill; index: number }) {
         </h3>
 
         {/* Desc */}
-        <p className="text-white/40 text-xs leading-relaxed">{skill.desc}</p>
+        <p className="min-h-[2.5rem] text-white/40 text-xs leading-relaxed">{skill.desc}</p>
 
         {/* Bottom accent line */}
         <div
