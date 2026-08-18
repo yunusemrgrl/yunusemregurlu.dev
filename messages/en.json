@@ -3,6 +3,7 @@
     "about": "About",
     "skills": "Skills",
     "projects": "Projects",
+    "work": "Work",
     "experience": "Experience",
     "education": "Education",
     "contact": "Contact",
@@ -48,8 +49,22 @@
     "titleHighlight": "Expertise",
     "subtitle": "Hover over a skill to explore — each card reveals the depth of experience behind it."
   },
+  "work": {
+    "tag": "04 / Client Work",
+    "title": "Commercial",
+    "titleHighlight": "Projects",
+    "subtitle": "Selected client projects shipped to production — explore the interfaces through screenshots and demo recordings.",
+    "watchDemo": "Watch demo",
+    "closeLabel": "Close",
+    "prevLabel": "Previous screenshot",
+    "nextLabel": "Next screenshot",
+    "openImageLabel": "Open full size",
+    "screenshotLabel": "Screenshot",
+    "ofLabel": "of",
+    "demoVideoLabel": "Demo recording"
+  },
   "experience": {
-    "tag": "04 / Experience",
+    "tag": "05 / Experience",
     "title": "Career",
     "titleHighlight": "Journey",
     "subtitle": "Click any card to expand the details.",
@@ -57,7 +72,7 @@
     "onsite": "On-site"
   },
   "education": {
-    "tag": "05 / Education & Certificates",
+    "tag": "06 / Education & Certificates",
     "title": "Learning",
     "titleHighlight": "Path",
     "educationTitle": "Education",
@@ -65,7 +80,7 @@
     "continuousLearning": "Continuously learning — always leveling up 🚀"
   },
   "contact": {
-    "tag": "06 / Contact",
+    "tag": "07 / Contact",
     "title": "Let's build something amazing together?",
     "subtitle": "I'm open to new projects, interesting ideas, and creative collaborations. Don't wait for the perfect moment to build something great!",
     "email": "Email",

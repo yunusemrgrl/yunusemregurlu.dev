@@ -16,6 +16,7 @@ export default function Navbar() {
     { label: t('about'), href: '#about' },
     { label: t('skills'), href: '#skills' },
     { label: t('projects'), href: '#projects' },
+    { label: t('work'), href: '#work' },
     { label: t('experience'), href: '#experience' },
     { label: t('education'), href: '#education' },
     { label: t('contact'), href: '#contact' },

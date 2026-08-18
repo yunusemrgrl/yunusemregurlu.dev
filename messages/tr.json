@@ -3,6 +3,7 @@
     "about": "Hakkımda",
     "skills": "Yetenekler",
     "projects": "Projeler",
+    "work": "Çalışmalar",
     "experience": "Deneyim",
     "education": "Eğitim",
     "contact": "İletişim",
@@ -48,8 +49,22 @@
     "titleHighlight": "Uzmanlığı",
     "subtitle": "Keşfetmek için bir yeteneğin üzerine gelin — her kart arkasındaki deneyimin derinliğini ortaya çıkarır."
   },
+  "work": {
+    "tag": "04 / Kurumsal Projeler",
+    "title": "Kurumsal",
+    "titleHighlight": "Projeler",
+    "subtitle": "Üretimde yayınlanan seçili müşteri projeleri — arayüzleri ekran görüntüleri ve demo kayıtlarıyla inceleyin.",
+    "watchDemo": "Demoyu izle",
+    "closeLabel": "Kapat",
+    "prevLabel": "Önceki ekran görüntüsü",
+    "nextLabel": "Sonraki ekran görüntüsü",
+    "openImageLabel": "Tam boy aç",
+    "screenshotLabel": "Ekran görüntüsü",
+    "ofLabel": "/",
+    "demoVideoLabel": "Demo kaydı"
+  },
   "experience": {
-    "tag": "04 / Deneyim",
+    "tag": "05 / Deneyim",
     "title": "Kariyer",
     "titleHighlight": "Yolculuğu",
     "subtitle": "Detayları genişletmek için herhangi bir karta tıklayın.",
@@ -57,7 +72,7 @@
     "onsite": "Yerinde"
   },
   "education": {
-    "tag": "05 / Eğitim ve Sertifikalar",
+    "tag": "06 / Eğitim ve Sertifikalar",
     "title": "Öğrenme",
     "titleHighlight": "Yolu",
     "educationTitle": "Eğitim",
@@ -65,7 +80,7 @@
     "continuousLearning": "Sürekli öğreniyor — her zaman seviye atlıyorum 🚀"
   },
   "contact": {
-    "tag": "06 / İletişim",
+    "tag": "07 / İletişim",
     "title": "Birlikte harika bir şeyler yapalım mı?",
     "subtitle": "Yeni projelere, ilginç fikirlere ve yaratıcı işbirliklerine açığım. Bir şeyler inşa etmek için doğru zamanı beklemeyin!",
     "email": "E-posta",
